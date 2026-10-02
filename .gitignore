@@ -2,7 +2,9 @@
 *.mat
 *.archive
 data/raw
-data/processed/
+data/processed/*
+!data/processed/features.csv
+!data/processed/energy_curves_b1.csv
 
 # 환경
 .venv/

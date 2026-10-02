@@ -40,7 +40,6 @@ from sklearn.preprocessing import StandardScaler
 from config import (CANDIDATES, CORE, LATE_COST_GRID, PROCESSED_DIR, RANDOM_STATE, RESULTS_DIR,
                     TARGET, TARGET_MAPE)
 from features import energy_value_curve
-from preprocess import load_cells
 
 N_FOLDS = 5
 MARGINS = np.round(np.arange(1.20, 0.5999, -0.001), 3)   # 큰 값부터: 손실이 같으면 덜 일찍 경고하는 쪽을 고른다
@@ -62,8 +61,14 @@ def split_holdout(b1):
     return b1[~is_valid].reset_index(drop=True), b1[is_valid].reset_index(drop=True)
 
 
-def value_curve(df, cells):
-    return energy_value_curve(cells, dict(zip(df.cell_id, df.cycle_life)))
+def load_curves():
+    """셀별 일찍 교체 손실 곡선 (features.py가 만든 data/processed/energy_curves_b1.csv, 저장소에 포함)."""
+    return pd.read_csv(PROCESSED_DIR / 'energy_curves_b1.csv', index_col='cell_id')
+
+
+def value_curve(df, curves):
+    """df에 있는 셀들의 곡선 중앙값."""
+    return energy_value_curve(curves, df.cell_id)
 
 
 # ---------- 지표 · 손실 ----------
@@ -189,14 +194,14 @@ def evaluate_sweep(sel, P, F, train, valid, b1, b2, b3, curve_tr, curve_b1):
     return pd.DataFrame(rows)
 
 
-def nested_cv(cand, b1, cells_b1):
+def nested_cv(cand, b1, curves_all):
     """선택 과정 전체(피처 조합 · 모델 · 여유 배율)를 B1 안에서 한 번 더 감싸 평가한다 (중첩 교차검증).
     바깥 GroupKFold(5, 충전 방식)의 학습 부분에서 안쪽 GroupKFold로 선택을 처음부터 다시 하고,
     바깥 평가 부분(처음 보는 충전 방식의 셀)에 적용한다. → 선택 과정의 낙관 편향까지 포함한 B1 안 성능"""
     cell_rows, acc_rows = [], []
     for k, (tr, te) in enumerate(GroupKFold(N_FOLDS).split(b1, b1[TARGET], b1.policy)):
         inner, test = b1.iloc[tr].reset_index(drop=True), b1.iloc[te].reset_index(drop=True)
-        curve = value_curve(inner, cells_b1)
+        curve = value_curve(inner, curves_all)
         oof, fold_mean, outp = {}, {}, {}
         for n, f, e in cand:
             oof[n], folds = oof_predict(e, inner[f], inner[TARGET], inner.policy, inner.cycle_life)
@@ -248,8 +253,8 @@ def main():
     print(f'학습 {len(train)}셀({train.policy.nunique()}방식) / 검증 {len(valid)}셀({valid.policy.nunique()}방식) / 테스트 B2 {len(b2)} / 추가 B3 {len(b3)}')
 
     # 일찍 교체 손실 곡선 — 선택용은 학습 28셀, 최종 배율용은 B1 36셀
-    cells_b1 = load_cells(['b1'])
-    curve_tr, curve_b1 = value_curve(train, cells_b1), value_curve(b1, cells_b1)
+    curves_all = load_curves()
+    curve_tr, curve_b1 = value_curve(train, curves_all), value_curve(b1, curves_all)
     pd.DataFrame({'남긴 수명 비율': curve_tr[0], '남긴 방전량 비율 (학습 28셀)': curve_tr[1],
                   '남긴 방전량 비율 (B1 36셀)': curve_b1[1]}).round(4).to_csv(RESULTS_DIR / 'energy_value_curve.csv', index=False)
     print('남긴 수명 10/20/30/50% → 남긴 방전량 (학습 28셀)', np.round(np.interp([.1, .2, .3, .5], *curve_tr), 3))
@@ -282,8 +287,9 @@ def main():
     print(perf.round(2).to_string())
 
     # 3) 선택 과정까지 포함한 B1 중첩 교차검증
-    nest, nest_acc = nested_cv(cand, b1, cells_b1)
+    nest, nest_acc = nested_cv(cand, b1, curves_all)
     nest.round(4).to_csv(RESULTS_DIR / 'nested_cv.csv', index=False)
+    nest_acc.round(4).to_csv(RESULTS_DIR / 'nested_cv_accuracy.csv', index=False)
     print('\n[B1 중첩 교차검증 — 정확도 기준 선택 모델의 바깥 fold MAPE]')
     print(nest_acc.round(2).to_string(index=False), '\n가중 평균 MAPE %.2f%%' % np.average(nest_acc.MAPE, weights=nest_acc.n))
     print('\n[B1 중첩 교차검증 — R별 손실 기준 선택]')

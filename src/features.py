@@ -90,18 +90,27 @@ def cell_features(cell):
     }
 
 
-def energy_value_curve(cells, life_by_id, grid=np.linspace(0, 1, 101)):
-    """일찍 교체 손실의 기준 곡선: 남긴 수명 비율 f → 남긴 방전량 비율 v(f).
-    셀마다 사이클 2~수명의 방전 용량으로 '마지막 f 구간이 전체 방전량에서 차지하는 비율'을 구하고 중앙값을 쓴다.
-    (용량은 끝으로 갈수록 빨리 줄지만 1.07 → 0.88Ah 범위라 v(0.2) ≈ 0.18로 거의 고르게 줄어든다)"""
-    curves = []
+VALUE_GRID = np.linspace(0, 1, 101)     # 남긴 수명 비율 0 ~ 100%
+
+
+def energy_curves(cells, life_by_id):
+    """일찍 교체 손실의 기준: 셀마다 '남긴 수명 비율 f → 남긴 방전량 비율 v(f)' 곡선.
+    사이클 2 ~ 수명의 방전 용량으로 '마지막 f 구간이 전체 방전량에서 차지하는 비율'을 구한다.
+    반환: 행 = cell_id, 열 = VALUE_GRID (101점)"""
+    rows = {}
     for cell in cells:
         if cell['cell_id'] not in life_by_id:
             continue
         life = int(life_by_id[cell['cell_id']])
         q = pd.Series(valid_qd(cell)[1:life]).interpolate(limit_direction='both').values
-        curves.append([q[int(round(len(q) * (1 - f))):].sum() / q.sum() for f in grid])
-    return grid, np.median(curves, axis=0)
+        rows[cell['cell_id']] = [q[int(round(len(q) * (1 - f))):].sum() / q.sum() for f in VALUE_GRID]
+    return pd.DataFrame.from_dict(rows, orient='index', columns=[f'{f:.2f}' for f in VALUE_GRID])
+
+
+def energy_value_curve(curves, cell_ids):
+    """여러 셀의 곡선 중앙값 → (VALUE_GRID, v). 용량은 끝으로 갈수록 빨리 줄지만 1.07 → 0.88Ah 범위라
+    v(0.2) ≈ 0.18로 거의 고르게 줄어든다."""
+    return VALUE_GRID, np.median(curves.loc[list(cell_ids)].values, axis=0)
 
 
 def build_table(cells):
@@ -125,8 +134,12 @@ def build_table(cells):
 
 
 if __name__ == '__main__':
-    df = build_table(load_cells())
+    cells = load_cells()
+    df = build_table(cells)
     df.to_csv(PROCESSED_DIR / 'features.csv', index=False)
+    b1 = df[(df.batch == 'b1') & (df.status == 'used')]
+    energy_curves([c for c in cells if c['batch'] == 'b1'], dict(zip(b1.cell_id, b1.cycle_life))).to_csv(
+        PROCESSED_DIR / 'energy_curves_b1.csv', index_label='cell_id')   # 저장소에 포함 (train.py가 원본 없이 돌도록)
     print(df.groupby(['batch', 'status']).size().unstack(fill_value=0))
     u = df[df.status == 'used']
     print(u.groupby('batch')[['cycle_gaps_100', 'qdlin_ok', 'vdlin_same', 'early_data_ok']].agg(['sum', 'count']))
