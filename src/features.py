@@ -26,9 +26,9 @@ def delta_q(cell, hi=100, lo=10):
 
 
 def knee_point(cell, start=2):
-    """2구간 선형 근사로 무릎점(급격한 열화 시작점) 탐색.
-    QD(사이클)를 두 직선으로 나눴을 때 제곱오차 합이 최소인 분기 사이클을 무릎점으로 본다.
-    반환: (knee 사이클, 무릎 전 기울기, 무릎 후 기울기)  [Ah/cycle]"""
+    """2구간 선형 근사로 knee point(급격한 열화 시작점) 탐색.
+    QD(사이클)를 두 직선으로 나눴을 때 제곱오차 합이 최소인 분기 사이클을 knee point로 본다.
+    반환: (knee 사이클, knee 전 기울기, knee 후 기울기)  [Ah/cycle]"""
     qd = valid_qd(cell)
     c = np.arange(1, len(qd) + 1)
     m = (c >= start) & ~np.isnan(qd)
