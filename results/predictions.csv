@@ -1,0 +1,953 @@
+model,split,cell_id,policy,cycle_life,pred
+선형회귀 (ΔQ 분산),train_cv,b1c5,4.4C(80%)-4.4C,1074.0,1047.31
+선형회귀 (ΔQ 분산),train_cv,b1c6,4.8C(80%)-4.8C,636.0,780.82
+선형회귀 (ΔQ 분산),train_cv,b1c7,4.8C(80%)-4.8C,870.0,807.61
+선형회귀 (ΔQ 분산),train_cv,b1c9,5.4C(40%)-3.6C,1054.0,953.45
+선형회귀 (ΔQ 분산),train_cv,b1c14,5.4C(60%)-3C,880.0,990.94
+선형회귀 (ΔQ 분산),train_cv,b1c15,5.4C(60%)-3C,719.0,967.71
+선형회귀 (ΔQ 분산),train_cv,b1c18,5.4C(70%)-3C,691.0,701.62
+선형회귀 (ΔQ 분산),train_cv,b1c19,5.4C(70%)-3C,788.0,685.6
+선형회귀 (ΔQ 분산),train_cv,b1c20,5.4C(80%)-5.4C,534.0,574.79
+선형회귀 (ΔQ 분산),train_cv,b1c21,5.4C(80%)-5.4C,559.0,567.66
+선형회귀 (ΔQ 분산),train_cv,b1c24,6C(40%)-3C,1017.0,887.78
+선형회귀 (ΔQ 분산),train_cv,b1c25,6C(40%)-3C,854.0,949.74
+선형회귀 (ΔQ 분산),train_cv,b1c26,6C(40%)-3.6C,870.0,782.08
+선형회귀 (ΔQ 분산),train_cv,b1c27,6C(40%)-3.6C,842.0,817.15
+선형회귀 (ΔQ 분산),train_cv,b1c28,6C(50%)-3C,860.0,814.34
+선형회귀 (ΔQ 분산),train_cv,b1c29,6C(50%)-3C,917.0,810.34
+선형회귀 (ΔQ 분산),train_cv,b1c30,6C(50%)-3.6C,709.0,768.5
+선형회귀 (ΔQ 분산),train_cv,b1c31,6C(50%)-3.6C,876.0,790.22
+선형회귀 (ΔQ 분산),train_cv,b1c32,6C(60%)-3C,731.0,706.56
+선형회귀 (ΔQ 분산),train_cv,b1c33,6C(60%)-3C,757.0,717.4
+선형회귀 (ΔQ 분산),train_cv,b1c36,7C(40%)-3C,704.0,724.3
+선형회귀 (ΔQ 분산),train_cv,b1c37,7C(40%)-3C,648.0,726.73
+선형회귀 (ΔQ 분산),train_cv,b1c38,7C(40%)-3.6C,617.0,596.05
+선형회귀 (ΔQ 분산),train_cv,b1c39,7C(40%)-3.6C,625.0,628.88
+선형회귀 (ΔQ 분산),train_cv,b1c40,8C(15%)-3.6C,966.0,998.61
+선형회귀 (ΔQ 분산),train_cv,b1c41,8C(15%)-3.6C,1051.0,1012.44
+선형회귀 (ΔQ 분산),train_cv,b1c42,8C(25%)-3.6C,702.0,710.15
+선형회귀 (ΔQ 분산),train_cv,b1c43,8C(25%)-3.6C,651.0,711.19
+선형회귀 (ΔQ 분산),valid,b1c11,5.4C(50%)-3C,788.0,1034.4
+선형회귀 (ΔQ 분산),valid,b1c16,5.4C(60%)-3.6C,862.0,997.39
+선형회귀 (ΔQ 분산),valid,b1c17,5.4C(60%)-3.6C,857.0,903.23
+선형회귀 (ΔQ 분산),valid,b1c23,6C(30%)-3.6C,1014.0,953.53
+선형회귀 (ΔQ 분산),valid,b1c34,7C(30%)-3.6C,742.0,822.8
+선형회귀 (ΔQ 분산),valid,b1c35,7C(30%)-3.6C,703.0,776.19
+선형회귀 (ΔQ 분산),valid,b1c44,8C(35%)-3.6C,616.0,592.53
+선형회귀 (ΔQ 분산),valid,b1c45,8C(35%)-3.6C,599.0,594.62
+선형회귀 (ΔQ 분산),test_b2,b2c0,5.2C(58%)-4C,477.0,629.49
+선형회귀 (ΔQ 분산),test_b2,b2c1,5.6C(26%)-4.5C,491.0,553.03
+선형회귀 (ΔQ 분산),test_b2,b2c2,5.2C(50%)-4.25C,424.0,617.96
+선형회귀 (ΔQ 분산),test_b2,b2c3,4.65C(44%)-5C,499.0,633.37
+선형회귀 (ΔQ 분산),test_b2,b2c4,4.65C(69%)-6C,444.0,528.77
+선형회귀 (ΔQ 분산),test_b2,b2c5,3.6C(30%)-6C,416.0,478.28
+선형회귀 (ΔQ 분산),test_b2,b2c6,3.6C(9%)-5C,393.0,648.19
+선형회귀 (ΔQ 분산),test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,1047.76
+선형회귀 (ΔQ 분산),test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,959.06
+선형회귀 (ΔQ 분산),test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,1131.83
+선형회귀 (ΔQ 분산),test_b2,b2c10,4.8C(80%)-4.8C,492.0,614.02
+선형회귀 (ΔQ 분산),test_b2,b2c11,5.2C(50%)-4.25C,449.0,628.69
+선형회귀 (ΔQ 분산),test_b2,b2c12,4.65C(44%)-5C,466.0,505.92
+선형회귀 (ΔQ 분산),test_b2,b2c13,4.65C(69%)-6C,460.0,570.87
+선형회귀 (ΔQ 분산),test_b2,b2c14,3.6C(30%)-6C,426.0,489.08
+선형회귀 (ΔQ 분산),test_b2,b2c15,3.6C(9%)-5C,396.0,642.11
+선형회귀 (ΔQ 분산),test_b2,b2c16,4.8C(80%)-4.8C,472.0,632.78
+선형회귀 (ΔQ 분산),test_b2,b2c17,5.6C(26%)-4.5C,471.0,635.15
+선형회귀 (ΔQ 분산),test_b2,b2c18,5.2C(50%)-4.25C,449.0,731.81
+선형회귀 (ΔQ 분산),test_b2,b2c19,6C(60%)-3C,392.0,550.73
+선형회귀 (ΔQ 분산),test_b2,b2c20,5.2C(58%)-4C,489.0,610.0
+선형회귀 (ΔQ 분산),test_b2,b2c21,6C(60%)-3C,408.0,563.97
+선형회귀 (ΔQ 분산),test_b2,b2c24,4.8C(80%)-4.8C,514.0,699.28
+선형회귀 (ΔQ 분산),test_b2,b2c25,5.2C(58%)-4C,493.0,650.17
+선형회귀 (ΔQ 분산),test_b2,b2c26,5.6C(26%)-4.5C,450.0,525.0
+선형회귀 (ΔQ 분산),test_b2,b2c27,5.2C(50%)-4.25C,474.0,629.04
+선형회귀 (ΔQ 분산),test_b2,b2c28,4.8C(80%)-4.8C,437.0,602.57
+선형회귀 (ΔQ 분산),test_b2,b2c29,5.2C(58%)-4C,452.0,638.6
+선형회귀 (ΔQ 분산),test_b2,b2c30,5.6C(26%)-4.5C,412.0,511.99
+선형회귀 (ΔQ 분산),test_b2,b2c31,5.6C(26%)-4.5C,425.0,573.97
+선형회귀 (ΔQ 분산),test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,978.31
+선형회귀 (ΔQ 분산),test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,1047.73
+선형회귀 (ΔQ 분산),test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,1215.46
+선형회귀 (ΔQ 분산),test_b2,b2c41,5.6C(26%)-4.5C,442.0,507.44
+선형회귀 (ΔQ 분산),test_b2,b2c42,5.2C(50%)-4.25C,474.0,627.48
+선형회귀 (ΔQ 분산),test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,1076.93
+선형회귀 (ΔQ 분산),test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,1147.5
+선형회귀 (ΔQ 분산),test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,1008.05
+선형회귀 (ΔQ 분산),test_b2,b2c46,4.8C(80%)-4.8C,503.0,638.87
+선형회귀 (ΔQ 분산),test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,1057.45
+선형회귀 (ΔQ 분산),test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,1087.12
+선형회귀 (ΔQ 분산),test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,1524.3
+선형회귀 (ΔQ 분산),test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,968.41
+선형회귀 (ΔQ 분산),test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,1010.3
+선형회귀 (ΔQ 분산),test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,966.97
+선형회귀 (ΔQ 분산),test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,646.28
+선형회귀 (ΔQ 분산),test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,1249.33
+선형회귀 (ΔQ 분산),test_b3,b3c8,5C(67%)-4C-newstructure,828.0,952.11
+선형회귀 (ΔQ 분산),test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,883.36
+선형회귀 (ΔQ 분산),test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,1184.88
+선형회귀 (ΔQ 분산),test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,826.41
+선형회귀 (ΔQ 분산),test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,862.15
+선형회귀 (ΔQ 분산),test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,953.85
+선형회귀 (ΔQ 분산),test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,893.93
+선형회귀 (ΔQ 분산),test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,894.55
+선형회귀 (ΔQ 분산),test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,1438.28
+선형회귀 (ΔQ 분산),test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,1208.1
+선형회귀 (ΔQ 분산),test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,1063.94
+선형회귀 (ΔQ 분산),test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,1005.79
+선형회귀 (ΔQ 분산),test_b3,b3c20,5C(67%)-4C-newstructure,813.0,935.67
+선형회귀 (ΔQ 분산),test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,730.32
+선형회귀 (ΔQ 분산),test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,923.25
+선형회귀 (ΔQ 분산),test_b3,b3c24,5C(67%)-4C-newstructure,825.0,994.37
+선형회귀 (ΔQ 분산),test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,988.47
+선형회귀 (ΔQ 분산),test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,1039.08
+선형회귀 (ΔQ 분산),test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,977.42
+선형회귀 (ΔQ 분산),test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,614.34
+선형회귀 (ΔQ 분산),test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,933.89
+선형회귀 (ΔQ 분산),test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,957.62
+선형회귀 (ΔQ 분산),test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,801.17
+선형회귀 (ΔQ 분산),test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,1172.41
+선형회귀 (ΔQ 분산),test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,1102.19
+선형회귀 (ΔQ 분산),test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,1050.05
+선형회귀 (ΔQ 분산),test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,1063.51
+선형회귀 (ΔQ 분산),test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,1896.85
+선형회귀 (ΔQ 분산),test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,1129.99
+선형회귀 (ΔQ 분산),test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,1220.5
+선형회귀 (ΔQ 분산),test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,1094.26
+선형회귀 (ΔQ 분산),test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,1039.08
+선형회귀 (ΔQ 분산),test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,1133.2
+선형회귀 (ΔQ 분산),test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,1110.59
+선형회귀 (ΔQ 분산),test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,978.33
+선형회귀 (ΔQ 분산),test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,1277.09
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c5,4.4C(80%)-4.4C,1074.0,1076.5
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c6,4.8C(80%)-4.8C,636.0,798.73
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c7,4.8C(80%)-4.8C,870.0,809.81
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c9,5.4C(40%)-3.6C,1054.0,927.67
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c14,5.4C(60%)-3C,880.0,975.21
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c15,5.4C(60%)-3C,719.0,955.47
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c18,5.4C(70%)-3C,691.0,712.04
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c19,5.4C(70%)-3C,788.0,683.94
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c20,5.4C(80%)-5.4C,534.0,630.39
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c21,5.4C(80%)-5.4C,559.0,579.74
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c24,6C(40%)-3C,1017.0,875.47
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c25,6C(40%)-3C,854.0,922.99
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c26,6C(40%)-3.6C,870.0,787.1
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c27,6C(40%)-3.6C,842.0,804.41
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c28,6C(50%)-3C,860.0,817.02
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c29,6C(50%)-3C,917.0,813.9
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c30,6C(50%)-3.6C,709.0,767.65
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c31,6C(50%)-3.6C,876.0,784.9
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c32,6C(60%)-3C,731.0,715.73
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c33,6C(60%)-3C,757.0,760.54
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c36,7C(40%)-3C,704.0,741.62
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c37,7C(40%)-3C,648.0,738.92
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c38,7C(40%)-3.6C,617.0,609.14
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c39,7C(40%)-3.6C,625.0,638.91
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c40,8C(15%)-3.6C,966.0,972.66
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c41,8C(15%)-3.6C,1051.0,986.9
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c42,8C(25%)-3.6C,702.0,716.72
+"ElasticNet (alpha=0.01, l1=0.5)",train_cv,b1c43,8C(25%)-3.6C,651.0,710.73
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c11,5.4C(50%)-3C,788.0,1002.03
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c16,5.4C(60%)-3.6C,862.0,988.49
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c17,5.4C(60%)-3.6C,857.0,894.2
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c23,6C(30%)-3.6C,1014.0,946.24
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c34,7C(30%)-3.6C,742.0,822.16
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c35,7C(30%)-3.6C,703.0,779.76
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c44,8C(35%)-3.6C,616.0,609.49
+"ElasticNet (alpha=0.01, l1=0.5)",valid,b1c45,8C(35%)-3.6C,599.0,610.88
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c0,5.2C(58%)-4C,477.0,646.77
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c1,5.6C(26%)-4.5C,491.0,579.9
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c2,5.2C(50%)-4.25C,424.0,628.18
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c3,4.65C(44%)-5C,499.0,630.74
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c4,4.65C(69%)-6C,444.0,543.54
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c5,3.6C(30%)-6C,416.0,495.63
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c6,3.6C(9%)-5C,393.0,649.8
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,1004.63
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,939.55
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,1093.97
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c10,4.8C(80%)-4.8C,492.0,635.42
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c11,5.2C(50%)-4.25C,449.0,640.81
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c12,4.65C(44%)-5C,466.0,524.59
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c13,4.65C(69%)-6C,460.0,586.88
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c14,3.6C(30%)-6C,426.0,509.45
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c15,3.6C(9%)-5C,396.0,651.63
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c16,4.8C(80%)-4.8C,472.0,653.93
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c17,5.6C(26%)-4.5C,471.0,648.92
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c18,5.2C(50%)-4.25C,449.0,734.83
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c19,6C(60%)-3C,392.0,570.58
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c20,5.2C(58%)-4C,489.0,615.5
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c21,6C(60%)-3C,408.0,587.22
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c24,4.8C(80%)-4.8C,514.0,711.57
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c25,5.2C(58%)-4C,493.0,662.41
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c26,5.6C(26%)-4.5C,450.0,552.42
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c27,5.2C(50%)-4.25C,474.0,646.78
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c28,4.8C(80%)-4.8C,437.0,615.92
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c29,5.2C(58%)-4C,452.0,653.1
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c30,5.6C(26%)-4.5C,412.0,535.21
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c31,5.6C(26%)-4.5C,425.0,587.41
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,956.93
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,1024.14
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,1162.02
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c41,5.6C(26%)-4.5C,442.0,524.79
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c42,5.2C(50%)-4.25C,474.0,646.01
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,1068.66
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,1116.19
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,986.87
+"ElasticNet (alpha=0.01, l1=0.5)",test_b2,b2c46,4.8C(80%)-4.8C,503.0,648.76
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,1022.94
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,1044.42
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,1480.66
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,932.74
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,973.38
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,941.5
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,646.81
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,1192.66
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c8,5C(67%)-4C-newstructure,828.0,927.48
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,873.52
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,1137.44
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,816.97
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,857.73
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,926.68
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,877.87
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,877.08
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,1368.09
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,1166.44
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,1025.69
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,978.2
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c20,5C(67%)-4C-newstructure,813.0,909.7
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,728.37
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,911.5
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c24,5C(67%)-4C-newstructure,825.0,965.83
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,960.64
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,1006.4
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,943.52
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,611.78
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,903.46
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,931.39
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,796.87
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,1120.76
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,1063.92
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,1015.01
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,1025.86
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,1771.19
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,1098.59
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,1169.81
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,1053.62
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,1021.78
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,1161.0
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,1107.6
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,953.69
+"ElasticNet (alpha=0.01, l1=0.5)",test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,1220.09
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c5,4.4C(80%)-4.4C,1074.0,943.07
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c6,4.8C(80%)-4.8C,636.0,721.4
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c7,4.8C(80%)-4.8C,870.0,744.84
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c9,5.4C(40%)-3.6C,1054.0,873.33
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c14,5.4C(60%)-3C,880.0,865.11
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c15,5.4C(60%)-3C,719.0,847.99
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c18,5.4C(70%)-3C,691.0,652.9
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c19,5.4C(70%)-3C,788.0,639.04
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c20,5.4C(80%)-5.4C,534.0,553.26
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c21,5.4C(80%)-5.4C,559.0,547.16
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c24,6C(40%)-3C,1017.0,814.78
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c25,6C(40%)-3C,854.0,868.6
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c26,6C(40%)-3.6C,870.0,723.84
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c27,6C(40%)-3.6C,842.0,754.56
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c28,6C(50%)-3C,860.0,749.75
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c29,6C(50%)-3C,917.0,746.33
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c30,6C(50%)-3.6C,709.0,698.31
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c31,6C(50%)-3.6C,876.0,714.9
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c32,6C(60%)-3C,731.0,664.68
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c33,6C(60%)-3C,757.0,673.74
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c36,7C(40%)-3C,704.0,671.79
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c37,7C(40%)-3C,648.0,673.93
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c38,7C(40%)-3.6C,617.0,559.57
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c39,7C(40%)-3.6C,625.0,588.73
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c40,8C(15%)-3.6C,966.0,870.75
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c41,8C(15%)-3.6C,1051.0,880.89
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c42,8C(25%)-3.6C,702.0,660.26
+"분위수 회귀 (하위 20%, ΔQ 분산)",train_cv,b1c43,8C(25%)-3.6C,651.0,661.16
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c11,5.4C(50%)-3C,788.0,929.37
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c16,5.4C(60%)-3.6C,862.0,898.53
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c17,5.4C(60%)-3.6C,857.0,819.67
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c23,6C(30%)-3.6C,1014.0,861.87
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c34,7C(30%)-3.6C,742.0,751.84
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c35,7C(30%)-3.6C,703.0,712.3
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c44,8C(35%)-3.6C,616.0,554.68
+"분위수 회귀 (하위 20%, ΔQ 분산)",valid,b1c45,8C(35%)-3.6C,599.0,556.49
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c0,5.2C(58%)-4C,477.0,588.35
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c1,5.6C(26%)-4.5C,491.0,522.84
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c2,5.2C(50%)-4.25C,424.0,578.52
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c3,4.65C(44%)-5C,499.0,591.66
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c4,4.65C(69%)-6C,444.0,501.89
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c5,3.6C(30%)-6C,416.0,458.02
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c6,3.6C(9%)-5C,393.0,604.27
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,936.15
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,863.62
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,1004.37
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c10,4.8C(80%)-4.8C,492.0,575.16
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c11,5.2C(50%)-4.25C,449.0,587.67
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c12,4.65C(44%)-5C,466.0,482.08
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c13,4.65C(69%)-6C,460.0,538.2
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c14,3.6C(30%)-6C,426.0,467.44
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c15,3.6C(9%)-5C,396.0,599.09
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c16,4.8C(80%)-4.8C,472.0,591.16
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c17,5.6C(26%)-4.5C,471.0,593.18
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c18,5.2C(50%)-4.25C,449.0,674.93
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c19,6C(60%)-3C,392.0,520.86
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c20,5.2C(58%)-4C,489.0,571.72
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c21,6C(60%)-3C,408.0,532.26
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c24,4.8C(80%)-4.8C,514.0,647.54
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c25,5.2C(58%)-4C,493.0,605.94
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c26,5.6C(26%)-4.5C,450.0,498.63
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c27,5.2C(50%)-4.25C,474.0,587.97
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c28,4.8C(80%)-4.8C,437.0,565.38
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c29,5.2C(58%)-4C,452.0,596.11
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c30,5.6C(26%)-4.5C,412.0,487.36
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c31,5.6C(26%)-4.5C,425.0,540.86
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,879.41
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,936.12
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,1071.81
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c41,5.6C(26%)-4.5C,442.0,483.41
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c42,5.2C(50%)-4.25C,474.0,586.64
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,959.87
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,1017.05
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,903.75
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b2,b2c46,4.8C(80%)-4.8C,503.0,596.34
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,944.03
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,968.15
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,1317.5
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,871.3
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,905.58
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,870.11
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,602.64
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,1099.01
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c8,5C(67%)-4C-newstructure,828.0,857.92
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,801.26
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,1047.2
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,754.03
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,783.7
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,859.34
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,809.99
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,810.5
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,1249.56
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,1065.9
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,949.31
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,901.9
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c20,5C(67%)-4C-newstructure,813.0,844.4
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,673.68
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,834.17
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c24,5C(67%)-4C-newstructure,825.0,892.56
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,887.73
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,929.07
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,878.68
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,575.43
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,842.94
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,862.44
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,733.01
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,1037.15
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,980.37
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,938.01
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,948.96
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,1608.11
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,1002.89
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,1075.87
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,973.94
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,929.07
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,1005.48
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,987.18
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,879.43
+"분위수 회귀 (하위 20%, ΔQ 분산)",test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,1121.24
+랜덤포레스트 (비교용),train_cv,b1c5,4.4C(80%)-4.4C,1074.0,996.72
+랜덤포레스트 (비교용),train_cv,b1c6,4.8C(80%)-4.8C,636.0,818.63
+랜덤포레스트 (비교용),train_cv,b1c7,4.8C(80%)-4.8C,870.0,848.71
+랜덤포레스트 (비교용),train_cv,b1c9,5.4C(40%)-3.6C,1054.0,921.07
+랜덤포레스트 (비교용),train_cv,b1c14,5.4C(60%)-3C,880.0,1004.46
+랜덤포레스트 (비교용),train_cv,b1c15,5.4C(60%)-3C,719.0,998.9
+랜덤포레스트 (비교용),train_cv,b1c18,5.4C(70%)-3C,691.0,700.62
+랜덤포레스트 (비교용),train_cv,b1c19,5.4C(70%)-3C,788.0,694.72
+랜덤포레스트 (비교용),train_cv,b1c20,5.4C(80%)-5.4C,534.0,680.69
+랜덤포레스트 (비교용),train_cv,b1c21,5.4C(80%)-5.4C,559.0,678.88
+랜덤포레스트 (비교용),train_cv,b1c24,6C(40%)-3C,1017.0,821.98
+랜덤포레스트 (비교용),train_cv,b1c25,6C(40%)-3C,854.0,835.69
+랜덤포레스트 (비교용),train_cv,b1c26,6C(40%)-3.6C,870.0,880.61
+랜덤포레스트 (비교용),train_cv,b1c27,6C(40%)-3.6C,842.0,892.92
+랜덤포레스트 (비교용),train_cv,b1c28,6C(50%)-3C,860.0,868.9
+랜덤포레스트 (비교용),train_cv,b1c29,6C(50%)-3C,917.0,875.31
+랜덤포레스트 (비교용),train_cv,b1c30,6C(50%)-3.6C,709.0,733.3
+랜덤포레스트 (비교용),train_cv,b1c31,6C(50%)-3.6C,876.0,743.21
+랜덤포레스트 (비교용),train_cv,b1c32,6C(60%)-3C,731.0,692.62
+랜덤포레스트 (비교용),train_cv,b1c33,6C(60%)-3C,757.0,691.03
+랜덤포레스트 (비교용),train_cv,b1c36,7C(40%)-3C,704.0,730.03
+랜덤포레스트 (비교용),train_cv,b1c37,7C(40%)-3C,648.0,731.74
+랜덤포레스트 (비교용),train_cv,b1c38,7C(40%)-3.6C,617.0,692.89
+랜덤포레스트 (비교용),train_cv,b1c39,7C(40%)-3.6C,625.0,709.14
+랜덤포레스트 (비교용),train_cv,b1c40,8C(15%)-3.6C,966.0,901.47
+랜덤포레스트 (비교용),train_cv,b1c41,8C(15%)-3.6C,1051.0,928.04
+랜덤포레스트 (비교용),train_cv,b1c42,8C(25%)-3.6C,702.0,675.24
+랜덤포레스트 (비교용),train_cv,b1c43,8C(25%)-3.6C,651.0,708.25
+랜덤포레스트 (비교용),valid,b1c11,5.4C(50%)-3C,788.0,1005.21
+랜덤포레스트 (비교용),valid,b1c16,5.4C(60%)-3.6C,862.0,1008.29
+랜덤포레스트 (비교용),valid,b1c17,5.4C(60%)-3.6C,857.0,919.99
+랜덤포레스트 (비교용),valid,b1c23,6C(30%)-3.6C,1014.0,902.3
+랜덤포레스트 (비교용),valid,b1c34,7C(30%)-3.6C,742.0,888.83
+랜덤포레스트 (비교용),valid,b1c35,7C(30%)-3.6C,703.0,742.15
+랜덤포레스트 (비교용),valid,b1c44,8C(35%)-3.6C,616.0,613.96
+랜덤포레스트 (비교용),valid,b1c45,8C(35%)-3.6C,599.0,617.02
+랜덤포레스트 (비교용),test_b2,b2c0,5.2C(58%)-4C,477.0,614.2
+랜덤포레스트 (비교용),test_b2,b2c1,5.6C(26%)-4.5C,491.0,597.76
+랜덤포레스트 (비교용),test_b2,b2c2,5.2C(50%)-4.25C,424.0,611.65
+랜덤포레스트 (비교용),test_b2,b2c3,4.65C(44%)-5C,499.0,613.93
+랜덤포레스트 (비교용),test_b2,b2c4,4.65C(69%)-6C,444.0,588.92
+랜덤포레스트 (비교용),test_b2,b2c5,3.6C(30%)-6C,416.0,576.76
+랜덤포레스트 (비교용),test_b2,b2c6,3.6C(9%)-5C,393.0,639.71
+랜덤포레스트 (비교용),test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,901.35
+랜덤포레스트 (비교용),test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,936.72
+랜덤포레스트 (비교용),test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,957.17
+랜덤포레스트 (비교용),test_b2,b2c10,4.8C(80%)-4.8C,492.0,608.35
+랜덤포레스트 (비교용),test_b2,b2c11,5.2C(50%)-4.25C,449.0,612.28
+랜덤포레스트 (비교용),test_b2,b2c12,4.65C(44%)-5C,466.0,597.34
+랜덤포레스트 (비교용),test_b2,b2c13,4.65C(69%)-6C,460.0,593.39
+랜덤포레스트 (비교용),test_b2,b2c14,3.6C(30%)-6C,426.0,585.0
+랜덤포레스트 (비교용),test_b2,b2c15,3.6C(9%)-5C,396.0,612.99
+랜덤포레스트 (비교용),test_b2,b2c16,4.8C(80%)-4.8C,472.0,611.53
+랜덤포레스트 (비교용),test_b2,b2c17,5.6C(26%)-4.5C,471.0,613.44
+랜덤포레스트 (비교용),test_b2,b2c18,5.2C(50%)-4.25C,449.0,666.7
+랜덤포레스트 (비교용),test_b2,b2c19,6C(60%)-3C,392.0,598.44
+랜덤포레스트 (비교용),test_b2,b2c20,5.2C(58%)-4C,489.0,613.09
+랜덤포레스트 (비교용),test_b2,b2c21,6C(60%)-3C,408.0,600.52
+랜덤포레스트 (비교용),test_b2,b2c24,4.8C(80%)-4.8C,514.0,722.72
+랜덤포레스트 (비교용),test_b2,b2c25,5.2C(58%)-4C,493.0,636.88
+랜덤포레스트 (비교용),test_b2,b2c26,5.6C(26%)-4.5C,450.0,600.12
+랜덤포레스트 (비교용),test_b2,b2c27,5.2C(50%)-4.25C,474.0,613.77
+랜덤포레스트 (비교용),test_b2,b2c28,4.8C(80%)-4.8C,437.0,606.22
+랜덤포레스트 (비교용),test_b2,b2c29,5.2C(58%)-4C,452.0,614.6
+랜덤포레스트 (비교용),test_b2,b2c30,5.6C(26%)-4.5C,412.0,588.93
+랜덤포레스트 (비교용),test_b2,b2c31,5.6C(26%)-4.5C,425.0,599.97
+랜덤포레스트 (비교용),test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,960.52
+랜덤포레스트 (비교용),test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,953.94
+랜덤포레스트 (비교용),test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,956.58
+랜덤포레스트 (비교용),test_b2,b2c41,5.6C(26%)-4.5C,442.0,600.41
+랜덤포레스트 (비교용),test_b2,b2c42,5.2C(50%)-4.25C,474.0,607.81
+랜덤포레스트 (비교용),test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,954.54
+랜덤포레스트 (비교용),test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,965.01
+랜덤포레스트 (비교용),test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,956.72
+랜덤포레스트 (비교용),test_b2,b2c46,4.8C(80%)-4.8C,503.0,612.16
+랜덤포레스트 (비교용),test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,971.92
+랜덤포레스트 (비교용),test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,949.33
+랜덤포레스트 (비교용),test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,949.13
+랜덤포레스트 (비교용),test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,892.53
+랜덤포레스트 (비교용),test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,938.66
+랜덤포레스트 (비교용),test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,956.58
+랜덤포레스트 (비교용),test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,597.34
+랜덤포레스트 (비교용),test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,955.81
+랜덤포레스트 (비교용),test_b3,b3c8,5C(67%)-4C-newstructure,828.0,969.0
+랜덤포레스트 (비교용),test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,885.63
+랜덤포레스트 (비교용),test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,967.2
+랜덤포레스트 (비교용),test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,856.38
+랜덤포레스트 (비교용),test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,885.17
+랜덤포레스트 (비교용),test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,953.2
+랜덤포레스트 (비교용),test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,892.4
+랜덤포레스트 (비교용),test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,885.56
+랜덤포레스트 (비교용),test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,949.06
+랜덤포레스트 (비교용),test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,949.32
+랜덤포레스트 (비교용),test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,958.33
+랜덤포레스트 (비교용),test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,950.17
+랜덤포레스트 (비교용),test_b3,b3c20,5C(67%)-4C-newstructure,813.0,958.44
+랜덤포레스트 (비교용),test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,694.55
+랜덤포레스트 (비교용),test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,923.68
+랜덤포레스트 (비교용),test_b3,b3c24,5C(67%)-4C-newstructure,825.0,957.92
+랜덤포레스트 (비교용),test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,955.12
+랜덤포레스트 (비교용),test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,952.83
+랜덤포레스트 (비교용),test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,945.98
+랜덤포레스트 (비교용),test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,587.62
+랜덤포레스트 (비교용),test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,979.4
+랜덤포레스트 (비교용),test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,959.56
+랜덤포레스트 (비교용),test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,868.18
+랜덤포레스트 (비교용),test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,930.57
+랜덤포레스트 (비교용),test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,956.58
+랜덤포레스트 (비교용),test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,949.45
+랜덤포레스트 (비교용),test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,954.74
+랜덤포레스트 (비교용),test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,952.34
+랜덤포레스트 (비교용),test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,949.34
+랜덤포레스트 (비교용),test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,949.34
+랜덤포레스트 (비교용),test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,949.83
+랜덤포레스트 (비교용),test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,970.12
+랜덤포레스트 (비교용),test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,963.86
+랜덤포레스트 (비교용),test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,956.67
+랜덤포레스트 (비교용),test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,970.35
+랜덤포레스트 (비교용),test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,958.85
+LightGBM (비교용),train_cv,b1c5,4.4C(80%)-4.4C,1074.0,993.92
+LightGBM (비교용),train_cv,b1c6,4.8C(80%)-4.8C,636.0,841.15
+LightGBM (비교용),train_cv,b1c7,4.8C(80%)-4.8C,870.0,885.9
+LightGBM (비교용),train_cv,b1c9,5.4C(40%)-3.6C,1054.0,824.21
+LightGBM (비교용),train_cv,b1c14,5.4C(60%)-3C,880.0,1047.53
+LightGBM (비교용),train_cv,b1c15,5.4C(60%)-3C,719.0,998.22
+LightGBM (비교용),train_cv,b1c18,5.4C(70%)-3C,691.0,538.5
+LightGBM (비교용),train_cv,b1c19,5.4C(70%)-3C,788.0,627.58
+LightGBM (비교용),train_cv,b1c20,5.4C(80%)-5.4C,534.0,640.5
+LightGBM (비교용),train_cv,b1c21,5.4C(80%)-5.4C,559.0,645.68
+LightGBM (비교용),train_cv,b1c24,6C(40%)-3C,1017.0,802.06
+LightGBM (비교용),train_cv,b1c25,6C(40%)-3C,854.0,807.81
+LightGBM (비교용),train_cv,b1c26,6C(40%)-3.6C,870.0,894.26
+LightGBM (비교용),train_cv,b1c27,6C(40%)-3.6C,842.0,923.37
+LightGBM (비교용),train_cv,b1c28,6C(50%)-3C,860.0,838.31
+LightGBM (비교용),train_cv,b1c29,6C(50%)-3C,917.0,894.15
+LightGBM (비교용),train_cv,b1c30,6C(50%)-3.6C,709.0,636.65
+LightGBM (비교용),train_cv,b1c31,6C(50%)-3.6C,876.0,663.52
+LightGBM (비교용),train_cv,b1c32,6C(60%)-3C,731.0,637.16
+LightGBM (비교용),train_cv,b1c33,6C(60%)-3C,757.0,742.8
+LightGBM (비교용),train_cv,b1c36,7C(40%)-3C,704.0,778.41
+LightGBM (비교용),train_cv,b1c37,7C(40%)-3C,648.0,839.6
+LightGBM (비교용),train_cv,b1c38,7C(40%)-3.6C,617.0,741.83
+LightGBM (비교용),train_cv,b1c39,7C(40%)-3.6C,625.0,713.59
+LightGBM (비교용),train_cv,b1c40,8C(15%)-3.6C,966.0,927.82
+LightGBM (비교용),train_cv,b1c41,8C(15%)-3.6C,1051.0,1047.53
+LightGBM (비교용),train_cv,b1c42,8C(25%)-3.6C,702.0,656.81
+LightGBM (비교용),train_cv,b1c43,8C(25%)-3.6C,651.0,810.5
+LightGBM (비교용),valid,b1c11,5.4C(50%)-3C,788.0,1048.65
+LightGBM (비교용),valid,b1c16,5.4C(60%)-3.6C,862.0,1098.62
+LightGBM (비교용),valid,b1c17,5.4C(60%)-3.6C,857.0,916.18
+LightGBM (비교용),valid,b1c23,6C(30%)-3.6C,1014.0,901.35
+LightGBM (비교용),valid,b1c34,7C(30%)-3.6C,742.0,816.97
+LightGBM (비교용),valid,b1c35,7C(30%)-3.6C,703.0,655.25
+LightGBM (비교용),valid,b1c44,8C(35%)-3.6C,616.0,681.35
+LightGBM (비교용),valid,b1c45,8C(35%)-3.6C,599.0,734.51
+LightGBM (비교용),test_b2,b2c0,5.2C(58%)-4C,477.0,673.57
+LightGBM (비교용),test_b2,b2c1,5.6C(26%)-4.5C,491.0,636.05
+LightGBM (비교용),test_b2,b2c2,5.2C(50%)-4.25C,424.0,628.2
+LightGBM (비교용),test_b2,b2c3,4.65C(44%)-5C,499.0,571.41
+LightGBM (비교용),test_b2,b2c4,4.65C(69%)-6C,444.0,566.78
+LightGBM (비교용),test_b2,b2c5,3.6C(30%)-6C,416.0,549.97
+LightGBM (비교용),test_b2,b2c6,3.6C(9%)-5C,393.0,571.41
+LightGBM (비교용),test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,779.36
+LightGBM (비교용),test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,944.82
+LightGBM (비교용),test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,953.06
+LightGBM (비교용),test_b2,b2c10,4.8C(80%)-4.8C,492.0,673.57
+LightGBM (비교용),test_b2,b2c11,5.2C(50%)-4.25C,449.0,640.52
+LightGBM (비교용),test_b2,b2c12,4.65C(44%)-5C,466.0,589.44
+LightGBM (비교용),test_b2,b2c13,4.65C(69%)-6C,460.0,583.83
+LightGBM (비교용),test_b2,b2c14,3.6C(30%)-6C,426.0,554.08
+LightGBM (비교용),test_b2,b2c15,3.6C(9%)-5C,396.0,558.66
+LightGBM (비교용),test_b2,b2c16,4.8C(80%)-4.8C,472.0,657.07
+LightGBM (비교용),test_b2,b2c17,5.6C(26%)-4.5C,471.0,639.71
+LightGBM (비교용),test_b2,b2c18,5.2C(50%)-4.25C,449.0,622.56
+LightGBM (비교용),test_b2,b2c19,6C(60%)-3C,392.0,530.27
+LightGBM (비교용),test_b2,b2c20,5.2C(58%)-4C,489.0,594.37
+LightGBM (비교용),test_b2,b2c21,6C(60%)-3C,408.0,644.31
+LightGBM (비교용),test_b2,b2c24,4.8C(80%)-4.8C,514.0,640.77
+LightGBM (비교용),test_b2,b2c25,5.2C(58%)-4C,493.0,523.61
+LightGBM (비교용),test_b2,b2c26,5.6C(26%)-4.5C,450.0,651.2
+LightGBM (비교용),test_b2,b2c27,5.2C(50%)-4.25C,474.0,652.92
+LightGBM (비교용),test_b2,b2c28,4.8C(80%)-4.8C,437.0,543.34
+LightGBM (비교용),test_b2,b2c29,5.2C(58%)-4C,452.0,673.57
+LightGBM (비교용),test_b2,b2c30,5.6C(26%)-4.5C,412.0,615.67
+LightGBM (비교용),test_b2,b2c31,5.6C(26%)-4.5C,425.0,554.7
+LightGBM (비교용),test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,926.65
+LightGBM (비교용),test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,912.47
+LightGBM (비교용),test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,880.69
+LightGBM (비교용),test_b2,b2c41,5.6C(26%)-4.5C,442.0,588.84
+LightGBM (비교용),test_b2,b2c42,5.2C(50%)-4.25C,474.0,594.85
+LightGBM (비교용),test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,912.16
+LightGBM (비교용),test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,930.15
+LightGBM (비교용),test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,898.38
+LightGBM (비교용),test_b2,b2c46,4.8C(80%)-4.8C,503.0,599.61
+LightGBM (비교용),test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,954.54
+LightGBM (비교용),test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,915.24
+LightGBM (비교용),test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,943.5
+LightGBM (비교용),test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,915.24
+LightGBM (비교용),test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,940.41
+LightGBM (비교용),test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,926.79
+LightGBM (비교용),test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,564.78
+LightGBM (비교용),test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,933.12
+LightGBM (비교용),test_b3,b3c8,5C(67%)-4C-newstructure,828.0,944.88
+LightGBM (비교용),test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,898.1
+LightGBM (비교용),test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,926.37
+LightGBM (비교용),test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,832.22
+LightGBM (비교용),test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,919.5
+LightGBM (비교용),test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,915.24
+LightGBM (비교용),test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,854.8
+LightGBM (비교용),test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,897.96
+LightGBM (비교용),test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,943.6
+LightGBM (비교용),test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,942.64
+LightGBM (비교용),test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,900.48
+LightGBM (비교용),test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,923.5
+LightGBM (비교용),test_b3,b3c20,5C(67%)-4C-newstructure,813.0,972.74
+LightGBM (비교용),test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,655.92
+LightGBM (비교용),test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,901.85
+LightGBM (비교용),test_b3,b3c24,5C(67%)-4C-newstructure,825.0,908.1
+LightGBM (비교용),test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,908.1
+LightGBM (비교용),test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,914.41
+LightGBM (비교용),test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,914.41
+LightGBM (비교용),test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,564.78
+LightGBM (비교용),test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,1046.46
+LightGBM (비교용),test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,940.41
+LightGBM (비교용),test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,830.93
+LightGBM (비교용),test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,953.26
+LightGBM (비교용),test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,926.79
+LightGBM (비교용),test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,915.24
+LightGBM (비교용),test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,902.96
+LightGBM (비교용),test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,942.64
+LightGBM (비교용),test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,943.6
+LightGBM (비교용),test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,914.41
+LightGBM (비교용),test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,914.41
+LightGBM (비교용),test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,988.14
+LightGBM (비교용),test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,965.56
+LightGBM (비교용),test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,936.13
+LightGBM (비교용),test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,923.04
+LightGBM (비교용),test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,956.37
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c5,4.4C(80%)-4.4C,1074.0,1013.68
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c6,4.8C(80%)-4.8C,636.0,811.9
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c7,4.8C(80%)-4.8C,870.0,813.29
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c9,5.4C(40%)-3.6C,1054.0,957.81
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c14,5.4C(60%)-3C,880.0,993.43
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c15,5.4C(60%)-3C,719.0,983.91
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c18,5.4C(70%)-3C,691.0,715.3
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c19,5.4C(70%)-3C,788.0,681.61
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c20,5.4C(80%)-5.4C,534.0,726.54
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c21,5.4C(80%)-5.4C,559.0,608.1
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c24,6C(40%)-3C,1017.0,880.21
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c25,6C(40%)-3C,854.0,928.52
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c26,6C(40%)-3.6C,870.0,776.06
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c27,6C(40%)-3.6C,842.0,793.92
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c28,6C(50%)-3C,860.0,805.63
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c29,6C(50%)-3C,917.0,811.68
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c30,6C(50%)-3.6C,709.0,794.34
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c31,6C(50%)-3.6C,876.0,714.78
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c32,6C(60%)-3C,731.0,692.54
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c33,6C(60%)-3C,757.0,733.11
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c36,7C(40%)-3C,704.0,744.05
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c37,7C(40%)-3C,648.0,738.61
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c38,7C(40%)-3.6C,617.0,583.53
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c39,7C(40%)-3.6C,625.0,626.73
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c40,8C(15%)-3.6C,966.0,978.98
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c41,8C(15%)-3.6C,1051.0,989.82
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c42,8C(25%)-3.6C,702.0,700.53
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),train_cv,b1c43,8C(25%)-3.6C,651.0,705.84
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c11,5.4C(50%)-3C,788.0,1016.84
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c16,5.4C(60%)-3.6C,862.0,994.48
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c17,5.4C(60%)-3.6C,857.0,904.32
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c23,6C(30%)-3.6C,1014.0,967.57
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c34,7C(30%)-3.6C,742.0,830.35
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c35,7C(30%)-3.6C,703.0,790.28
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c44,8C(35%)-3.6C,616.0,616.04
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),valid,b1c45,8C(35%)-3.6C,599.0,598.99
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c0,5.2C(58%)-4C,477.0,639.75
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c1,5.6C(26%)-4.5C,491.0,591.53
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c2,5.2C(50%)-4.25C,424.0,603.64
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c3,4.65C(44%)-5C,499.0,548.96
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c4,4.65C(69%)-6C,444.0,533.84
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c5,3.6C(30%)-6C,416.0,520.37
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c6,3.6C(9%)-5C,393.0,576.27
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,902.52
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,1020.33
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,1113.17
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c10,4.8C(80%)-4.8C,492.0,588.41
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c11,5.2C(50%)-4.25C,449.0,559.47
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c12,4.65C(44%)-5C,466.0,466.61
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c13,4.65C(69%)-6C,460.0,535.54
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c14,3.6C(30%)-6C,426.0,510.51
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c15,3.6C(9%)-5C,396.0,563.09
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c16,4.8C(80%)-4.8C,472.0,676.93
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c17,5.6C(26%)-4.5C,471.0,621.51
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c18,5.2C(50%)-4.25C,449.0,648.57
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c19,6C(60%)-3C,392.0,528.25
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c20,5.2C(58%)-4C,489.0,569.96
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c21,6C(60%)-3C,408.0,552.53
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c24,4.8C(80%)-4.8C,514.0,662.25
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c25,5.2C(58%)-4C,493.0,622.88
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c26,5.6C(26%)-4.5C,450.0,554.24
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c27,5.2C(50%)-4.25C,474.0,604.71
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c28,4.8C(80%)-4.8C,437.0,545.65
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c29,5.2C(58%)-4C,452.0,562.05
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c30,5.6C(26%)-4.5C,412.0,551.24
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c31,5.6C(26%)-4.5C,425.0,517.97
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,946.58
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,1111.03
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,1196.62
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c41,5.6C(26%)-4.5C,442.0,478.14
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c42,5.2C(50%)-4.25C,474.0,560.97
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,1185.03
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,1204.86
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,1103.96
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b2,b2c46,4.8C(80%)-4.8C,503.0,616.34
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,1004.8
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,1022.51
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,1427.13
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,895.33
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,950.5
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,913.06
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,649.79
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,1213.08
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c8,5C(67%)-4C-newstructure,828.0,894.85
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,852.19
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,1142.82
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,793.0
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,850.9
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,894.84
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,845.44
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,846.39
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,1405.4
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,1167.08
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,1016.84
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,970.79
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c20,5C(67%)-4C-newstructure,813.0,882.06
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,726.85
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,899.12
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c24,5C(67%)-4C-newstructure,825.0,940.52
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,940.93
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,997.01
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,896.55
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,595.74
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,846.55
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,921.03
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,777.03
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,1137.2
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,1063.26
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,1013.83
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,1014.34
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,1554.67
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,1118.9
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,1194.1
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,1046.26
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,1093.41
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,1114.6
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,1072.42
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,932.6
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,1254.89
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c5,4.4C(80%)-4.4C,1074.0,1151.49
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c6,4.8C(80%)-4.8C,636.0,731.84
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c7,4.8C(80%)-4.8C,870.0,774.88
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c9,5.4C(40%)-3.6C,1054.0,913.95
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c14,5.4C(60%)-3C,880.0,1004.73
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c15,5.4C(60%)-3C,719.0,951.41
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c18,5.4C(70%)-3C,691.0,714.58
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c19,5.4C(70%)-3C,788.0,659.39
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c20,5.4C(80%)-5.4C,534.0,720.52
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c21,5.4C(80%)-5.4C,559.0,587.4
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c24,6C(40%)-3C,1017.0,860.25
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c25,6C(40%)-3C,854.0,916.23
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c26,6C(40%)-3.6C,870.0,803.09
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c27,6C(40%)-3.6C,842.0,794.88
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c28,6C(50%)-3C,860.0,837.5
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c29,6C(50%)-3C,917.0,835.34
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c30,6C(50%)-3.6C,709.0,754.52
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c31,6C(50%)-3.6C,876.0,791.94
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c32,6C(60%)-3C,731.0,709.18
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c33,6C(60%)-3C,757.0,796.53
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c36,7C(40%)-3C,704.0,761.76
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c37,7C(40%)-3C,648.0,713.52
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c38,7C(40%)-3.6C,617.0,615.72
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c39,7C(40%)-3.6C,625.0,635.08
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c40,8C(15%)-3.6C,966.0,988.78
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c41,8C(15%)-3.6C,1051.0,1012.05
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c42,8C(25%)-3.6C,702.0,729.69
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),train_cv,b1c43,8C(25%)-3.6C,651.0,690.65
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c11,5.4C(50%)-3C,788.0,959.09
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c16,5.4C(60%)-3.6C,862.0,1067.73
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c17,5.4C(60%)-3.6C,857.0,916.72
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c23,6C(30%)-3.6C,1014.0,990.2
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c34,7C(30%)-3.6C,742.0,845.32
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c35,7C(30%)-3.6C,703.0,809.27
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c44,8C(35%)-3.6C,616.0,632.81
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),valid,b1c45,8C(35%)-3.6C,599.0,639.4
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c0,5.2C(58%)-4C,477.0,633.21
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c1,5.6C(26%)-4.5C,491.0,589.36
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c2,5.2C(50%)-4.25C,424.0,600.74
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c3,4.65C(44%)-5C,499.0,549.65
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c4,4.65C(69%)-6C,444.0,515.97
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c5,3.6C(30%)-6C,416.0,495.33
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c6,3.6C(9%)-5C,393.0,600.32
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,1055.96
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,927.56
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,1234.64
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c10,4.8C(80%)-4.8C,492.0,662.48
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c11,5.2C(50%)-4.25C,449.0,610.82
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c12,4.65C(44%)-5C,466.0,510.62
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c13,4.65C(69%)-6C,460.0,615.23
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c14,3.6C(30%)-6C,426.0,504.35
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c15,3.6C(9%)-5C,396.0,646.92
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c16,4.8C(80%)-4.8C,472.0,650.9
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c17,5.6C(26%)-4.5C,471.0,620.53
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c18,5.2C(50%)-4.25C,449.0,718.86
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c19,6C(60%)-3C,392.0,567.77
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c20,5.2C(58%)-4C,489.0,555.26
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c21,6C(60%)-3C,408.0,589.88
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c24,4.8C(80%)-4.8C,514.0,748.12
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c25,5.2C(58%)-4C,493.0,654.06
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c26,5.6C(26%)-4.5C,450.0,544.83
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c27,5.2C(50%)-4.25C,474.0,621.18
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c28,4.8C(80%)-4.8C,437.0,615.93
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c29,5.2C(58%)-4C,452.0,658.76
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c30,5.6C(26%)-4.5C,412.0,527.92
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c31,5.6C(26%)-4.5C,425.0,583.09
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,1106.89
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,1211.68
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,1306.11
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c41,5.6C(26%)-4.5C,442.0,492.77
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c42,5.2C(50%)-4.25C,474.0,695.91
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,1283.9
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,1203.17
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,1006.74
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b2,b2c46,4.8C(80%)-4.8C,503.0,629.06
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,1106.51
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,1116.94
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,2374.8
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,933.88
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,991.62
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,1004.45
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,721.0
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,1296.37
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c8,5C(67%)-4C-newstructure,828.0,975.84
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,929.7
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,1247.37
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,842.23
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,917.26
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,967.07
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,913.03
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,920.52
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,1631.43
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,1356.71
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,1102.73
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,1060.18
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c20,5C(67%)-4C-newstructure,813.0,928.28
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,838.53
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,1002.12
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c24,5C(67%)-4C-newstructure,825.0,998.47
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,984.2
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,1047.79
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,971.6
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,651.41
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,925.37
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,943.11
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,817.06
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,1181.03
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,1161.87
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,1070.03
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,1097.28
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,2975.25
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,1234.68
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,1275.83
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,1118.52
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,1045.18
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,2009.98
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,1543.8
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,1000.75
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,1333.97
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c5,4.4C(80%)-4.4C,1074.0,920.0
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c6,4.8C(80%)-4.8C,636.0,780.25
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c7,4.8C(80%)-4.8C,870.0,797.38
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c9,5.4C(40%)-3.6C,1054.0,879.47
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c14,5.4C(60%)-3C,880.0,900.94
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c15,5.4C(60%)-3C,719.0,887.28
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c18,5.4C(70%)-3C,691.0,728.88
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c19,5.4C(70%)-3C,788.0,717.96
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c20,5.4C(80%)-5.4C,534.0,669.49
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c21,5.4C(80%)-5.4C,559.0,665.07
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c24,6C(40%)-3C,1017.0,847.49
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c25,6C(40%)-3C,854.0,885.11
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c26,6C(40%)-3.6C,870.0,780.19
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c27,6C(40%)-3.6C,842.0,801.16
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c28,6C(50%)-3C,860.0,803.39
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c29,6C(50%)-3C,917.0,800.81
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c30,6C(50%)-3.6C,709.0,764.86
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c31,6C(50%)-3.6C,876.0,778.71
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c32,6C(60%)-3C,731.0,746.85
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c33,6C(60%)-3C,757.0,752.9
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c36,7C(40%)-3C,704.0,743.4
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c37,7C(40%)-3C,648.0,745.01
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c38,7C(40%)-3.6C,617.0,662.03
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c39,7C(40%)-3.6C,625.0,683.84
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c40,8C(15%)-3.6C,966.0,905.43
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c41,8C(15%)-3.6C,1051.0,913.48
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c42,8C(25%)-3.6C,702.0,734.65
+"ElasticNet (alpha=0.03, l1=0.9)",train_cv,b1c43,8C(25%)-3.6C,651.0,735.36
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c11,5.4C(50%)-3C,788.0,929.15
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c16,5.4C(60%)-3.6C,862.0,908.33
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c17,5.4C(60%)-3.6C,857.0,853.97
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c23,6C(30%)-3.6C,1014.0,883.26
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c34,7C(30%)-3.6C,742.0,805.83
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c35,7C(30%)-3.6C,703.0,777.12
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c44,8C(35%)-3.6C,616.0,656.94
+"ElasticNet (alpha=0.03, l1=0.9)",valid,b1c45,8C(35%)-3.6C,599.0,658.38
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c0,5.2C(58%)-4C,477.0,683.7
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c1,5.6C(26%)-4.5C,491.0,632.38
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c2,5.2C(50%)-4.25C,424.0,676.12
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c3,4.65C(44%)-5C,499.0,686.23
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c4,4.65C(69%)-6C,444.0,615.51
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c5,3.6C(30%)-6C,416.0,579.4
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c6,3.6C(9%)-5C,393.0,695.87
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c7,4.8C(80%)-4.8C-newstructure,777.0,929.37
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c8,5.2C(58%)-4C-newstructure,904.0,881.13
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c9,5.6C(26%)-4.5C-newstructure,791.0,973.6
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c10,4.8C(80%)-4.8C,492.0,673.52
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c11,5.2C(50%)-4.25C,449.0,683.17
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c12,4.65C(44%)-5C,466.0,599.35
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c13,4.65C(69%)-6C,460.0,644.59
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c14,3.6C(30%)-6C,426.0,587.25
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c15,3.6C(9%)-5C,396.0,691.92
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c16,4.8C(80%)-4.8C,472.0,685.85
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c17,5.6C(26%)-4.5C,471.0,687.4
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c18,5.2C(50%)-4.25C,449.0,748.64
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c19,6C(60%)-3C,392.0,630.79
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c20,5.2C(58%)-4C,489.0,670.86
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c21,6C(60%)-3C,408.0,639.89
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c24,4.8C(80%)-4.8C,514.0,728.41
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c25,5.2C(58%)-4C,493.0,697.14
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c26,5.6C(26%)-4.5C,450.0,612.87
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c27,5.2C(50%)-4.25C,474.0,683.4
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c28,4.8C(80%)-4.8C,437.0,665.93
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c29,5.2C(58%)-4C,452.0,689.64
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c30,5.6C(26%)-4.5C,412.0,603.67
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c31,5.6C(26%)-4.5C,425.0,646.7
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c32,4.8C(80%)-4.8C-newstructure,809.0,891.75
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c33,5.2C(58%)-4C-newstructure,1140.0,929.35
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c34,5.6C(26%)-4.5C-newstructure,1186.0,1016.33
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c41,5.6C(26%)-4.5C,442.0,600.44
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c42,5.2C(50%)-4.25C,474.0,682.38
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c43,4.8C(80%)-4.8C-newstructure,1029.0,944.87
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c44,5.2C(58%)-4C-newstructure,841.0,981.71
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c45,5.6C(26%)-4.5C-newstructure,997.0,907.98
+"ElasticNet (alpha=0.03, l1=0.9)",test_b2,b2c46,4.8C(80%)-4.8C,503.0,689.82
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c0,5C(67%)-4C-newstructure,1009.0,934.53
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c1,5.3C(54%)-4C-newstructure,1063.0,950.25
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c2,5.6C(19%)-4.6C-newstructure,1267.0,1164.88
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c3,5.6C(36%)-4.3C-newstructure,1115.0,886.3
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c4,5.6C(19%)-4.6C-newstructure,1048.0,909.2
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c5,5.6C(36%)-4.3C-newstructure,828.0,885.5
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c6,3.7C(31%)-5.9C-newstructure,667.0,694.62
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c7,4.8C(80%)-4.8C-newstructure,1836.0,1033.31
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c8,5C(67%)-4C-newstructure,828.0,877.28
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c9,5.3C(54%)-4C-newstructure,1039.0,838.54
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c10,4.8C(80%)-4.8C-newstructure,1078.0,1000.85
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c11,5.6C(19%)-4.6C-newstructure,817.0,805.54
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c12,5.6C(36%)-4.3C-newstructure,932.0,826.35
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c13,5.6C(19%)-4.6C-newstructure,816.0,878.24
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c14,5.6C(36%)-4.3C-newstructure,858.0,844.57
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c15,5.9C(15%)-4.6C-newstructure,876.0,844.92
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c16,4.8C(80%)-4.8C-newstructure,1638.0,1124.82
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c17,5.3C(54%)-4C-newstructure,1315.0,1012.62
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c18,5.6C(19%)-4.6C-newstructure,1146.0,937.99
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c19,5.6C(36%)-4.3C-newstructure,1155.0,906.76
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c20,5C(67%)-4C-newstructure,813.0,868.12
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c21,3.7C(31%)-5.9C-newstructure,772.0,747.72
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c22,5.9C(60%)-3.1C-newstructure,1002.0,861.15
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c24,5C(67%)-4C-newstructure,825.0,900.54
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c25,5.3C(54%)-4C-newstructure,989.0,897.31
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c26,5.6C(19%)-4.6C-newstructure,1028.0,924.72
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c27,5.6C(36%)-4.3C-newstructure,850.0,891.26
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c28,3.7C(31%)-5.9C-newstructure,541.0,673.73
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c29,5.9C(15%)-4.6C-newstructure,858.0,867.13
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c30,5.3C(54%)-4C-newstructure,935.0,880.33
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c31,5.9C(60%)-3.1C-newstructure,731.0,790.62
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c33,5C(67%)-4C-newstructure,1284.0,994.49
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c34,5.3C(54%)-4C-newstructure,1158.0,958.16
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c35,5.6C(19%)-4.6C-newstructure,1093.0,930.59
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c36,5.6C(36%)-4.3C-newstructure,923.0,937.76
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c37,4.8C(80%)-4.8C-newstructure,1390.0,1328.92
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c38,5C(67%)-4C-newstructure,1935.0,972.65
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c39,5.3C(54%)-4C-newstructure,1156.0,1018.87
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c40,5.6C(19%)-4.6C-newstructure,796.0,954.0
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c41,5.6C(36%)-4.3C-newstructure,786.0,924.72
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c42,4.8C(80%)-4.8C-newstructure,1642.0,974.31
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c43,5C(67%)-4C-newstructure,1046.0,962.55
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c44,5.3C(54%)-4C-newstructure,940.0,891.76
+"ElasticNet (alpha=0.03, l1=0.9)",test_b3,b3c45,4.8C(80%)-4.8C-newstructure,1801.0,1047.08

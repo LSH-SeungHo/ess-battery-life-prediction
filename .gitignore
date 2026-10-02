@@ -1,0 +1,15 @@
+# 원본 · 가공 데이터 (용량이 커서 제외 — data/README.md 참고)
+*.mat
+*.archive
+data/raw
+data/processed/
+
+# 환경
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# 작업 초안 (제출물 아님)
+초안/
+notebooks/00_scratch.ipynb
