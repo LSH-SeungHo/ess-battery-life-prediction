@@ -1,35 +1,35 @@
-후보,계열,피처,Train CV MAPE,Valid MAPE
-선형회귀 (ΔQ 분산),선형회귀,dq_var_log,8.216,10.522
-선형회귀 (ΔQ 분산 + ir_min),선형회귀,dq_var_log + ir_min,8.485,10.191
-"ElasticNet (alpha=0.01, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.601,9.703
-"ElasticNet (alpha=0.01, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.708,9.286
-선형회귀 (ΔQ 분산 + tavg_mean),선형회귀,dq_var_log + tavg_mean,8.739,10.708
-선형회귀 (ΔQ 분산 + dq_skew),선형회귀,dq_var_log + dq_skew,8.839,10.416
-"ElasticNet (alpha=0.03, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.964,10.198
-"ElasticNet (alpha=0.003, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.072,10.252
-선형회귀 (ΔQ 분산 + dq_skew + ir_min),선형회귀,dq_var_log + dq_skew + ir_min,9.121,11.224
-선형회귀 (ΔQ 분산 + dq_skew + tavg_mean),선형회귀,dq_var_log + dq_skew + tavg_mean,9.272,10.464
-선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),선형회귀,dq_var_log + dq_skew + qd_slope_2_100,9.311,11.676
-"ElasticNet (alpha=0.03, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.314,9.06
-선형회귀 (ΔQ 분산 + ir_min + tavg_mean),선형회귀,dq_var_log + ir_min + tavg_mean,9.33,10.314
-"ElasticNet (alpha=0.003, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.449,10.982
-선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100 + tavg_mean),선형회귀,dq_var_log + dq_skew + qd_slope_2_100 + tavg_mean,9.559,11.89
-"ElasticNet (alpha=0.01, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.607,11.3
-선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100 + ir_min),선형회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min,9.656,11.71
-"ElasticNet (alpha=0.001, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.697,11.347
-선형회귀 (ΔQ 분산 + dq_skew + ir_min + tavg_mean),선형회귀,dq_var_log + dq_skew + ir_min + tavg_mean,9.705,11.302
-선형회귀 (ΔQ 분산 + qd_slope_2_100),선형회귀,dq_var_log + qd_slope_2_100,9.744,10.511
-"ElasticNet (alpha=0.001, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.853,11.595
-"ElasticNet (alpha=0.003, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.918,11.72
-선형회귀 (ΔQ 분산 + qd_slope_2_100 + tavg_mean),선형회귀,dq_var_log + qd_slope_2_100 + tavg_mean,9.963,10.715
-"ElasticNet (alpha=0.001, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,10.009,11.844
-선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100 + ir_min + tavg_mean),선형회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,10.053,11.907
-"분위수 회귀 (하위 20%, ΔQ 분산)",분위수 회귀,dq_var_log,10.155,7.655
-선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min),선형회귀,dq_var_log + qd_slope_2_100 + ir_min,10.245,9.513
-선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),선형회귀,dq_var_log + qd_slope_2_100 + ir_min + tavg_mean,10.608,9.855
-"ElasticNet (alpha=0.03, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,10.611,9.03
-랜덤포레스트 (비교용),랜덤포레스트,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,10.938,11.45
-"분위수 회귀 (하위 20%, 전체 후보)",분위수 회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,11.813,7.747
-"분위수 회귀 (하위 10%, 전체 후보)",분위수 회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,12.468,7.925
-LightGBM (비교용),LightGBM,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,14.358,16.084
-"분위수 회귀 (하위 10%, ΔQ 분산)",분위수 회귀,dq_var_log,14.4,7.883
+후보,계열,피처,Train CV MAPE (fold 평균),Train CV MAPE (fold 표준편차),Valid MAPE
+선형회귀 (ΔQ 분산),선형회귀,dq_var_log,7.981,3.241,10.522
+선형회귀 (ΔQ 분산 + ir_min),선형회귀,dq_var_log + ir_min,8.248,3.334,10.191
+"ElasticNet (alpha=0.01, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.388,2.992,9.703
+선형회귀 (ΔQ 분산 + tavg_mean),선형회귀,dq_var_log + tavg_mean,8.511,3.299,10.708
+"ElasticNet (alpha=0.01, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.533,2.501,9.286
+선형회귀 (ΔQ 분산 + dq_skew),선형회귀,dq_var_log + dq_skew,8.726,2.096,10.416
+"ElasticNet (alpha=0.03, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.781,2.737,10.198
+"ElasticNet (alpha=0.003, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,8.912,2.593,10.252
+선형회귀 (ΔQ 분산 + dq_skew + ir_min),선형회귀,dq_var_log + dq_skew + ir_min,9.014,2.296,11.224
+선형회귀 (ΔQ 분산 + ir_min + tavg_mean),선형회귀,dq_var_log + ir_min + tavg_mean,9.113,3.281,10.314
+선형회귀 (ΔQ 분산 + dq_skew + tavg_mean),선형회귀,dq_var_log + dq_skew + tavg_mean,9.153,2.369,10.464
+"ElasticNet (alpha=0.03, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.209,1.797,9.06
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100),선형회귀,dq_var_log + dq_skew + qd_slope_2_100,9.249,2.456,11.676
+"ElasticNet (alpha=0.003, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.313,2.602,10.982
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100 + tavg_mean),선형회귀,dq_var_log + dq_skew + qd_slope_2_100 + tavg_mean,9.476,2.551,11.89
+"ElasticNet (alpha=0.01, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.477,2.655,11.3
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100 + ir_min),선형회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min,9.567,2.666,11.71
+"ElasticNet (alpha=0.001, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.572,2.724,11.347
+선형회귀 (ΔQ 분산 + dq_skew + ir_min + tavg_mean),선형회귀,dq_var_log + dq_skew + ir_min + tavg_mean,9.594,2.637,11.302
+선형회귀 (ΔQ 분산 + qd_slope_2_100),선형회귀,dq_var_log + qd_slope_2_100,9.678,2.826,10.511
+"ElasticNet (alpha=0.001, l1=0.5)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.735,2.818,11.595
+"ElasticNet (alpha=0.003, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.803,2.852,11.72
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + tavg_mean),선형회귀,dq_var_log + qd_slope_2_100 + tavg_mean,9.867,2.661,10.715
+"ElasticNet (alpha=0.001, l1=0.1)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.899,2.924,11.844
+선형회귀 (ΔQ 분산 + dq_skew + qd_slope_2_100 + ir_min + tavg_mean),선형회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,9.944,2.962,11.907
+"분위수 회귀 (하위 20%, ΔQ 분산)",분위수 회귀,dq_var_log,10.128,1.452,7.655
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min),선형회귀,dq_var_log + qd_slope_2_100 + ir_min,10.16,3.104,9.513
+선형회귀 (ΔQ 분산 + qd_slope_2_100 + ir_min + tavg_mean),선형회귀,dq_var_log + qd_slope_2_100 + ir_min + tavg_mean,10.503,3.204,9.855
+"ElasticNet (alpha=0.03, l1=0.9)",ElasticNet,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,10.636,1.401,9.03
+랜덤포레스트 (비교용),랜덤포레스트,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,10.981,3.525,11.45
+"분위수 회귀 (하위 20%, 전체 후보)",분위수 회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,11.921,2.59,7.747
+"분위수 회귀 (하위 10%, 전체 후보)",분위수 회귀,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,12.556,3.015,7.925
+LightGBM (비교용),LightGBM,dq_var_log + dq_skew + qd_slope_2_100 + ir_min + tavg_mean,14.243,1.95,16.084
+"분위수 회귀 (하위 10%, ΔQ 분산)",분위수 회귀,dq_var_log,14.564,3.468,7.883

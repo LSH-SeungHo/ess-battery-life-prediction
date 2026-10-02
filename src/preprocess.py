@@ -20,7 +20,7 @@ import sys
 import h5py
 import numpy as np
 
-from config import BATCHES, CENSOR_AH, EOL_AH, MAX_CYCLE, PROCESSED_DIR, QD_VALID, RAW_DIR
+from config import BATCHES, CENSOR_AH, EOL_AH, MAX_CYCLE, PROCESSED_DIR, QD_JUMP_MAX, QD_VALID, RAW_DIR
 
 SUMMARY_KEYS = ['QDischarge', 'QCharge', 'IR', 'Tavg', 'Tmax', 'Tmin', 'chargetime', 'cycle']
 
@@ -106,6 +106,32 @@ def eol_cycle(cell):
         return int(idx[0] + 1)
     last = qd[~np.isnan(qd)][-5:]
     return len(qd) + 1 if len(last) and last.mean() <= 0.89 else np.nan
+
+
+def alignment_check(cell, ref_vdlin):
+    """배치 간 비교가 가능한지 점검 (초기 100사이클).
+    - cycle_gaps_100 : 사이클 번호가 1씩 증가하지 않는 곳의 수 (수집 공백)
+    - qdlin_ok       : 10 · 100번째 사이클 Qdlin이 모두 있는가
+    - vdlin_same     : 전압 눈금이 학습 배치와 같은가
+    - qd_jump_max    : 연속 두 사이클 방전 용량 차이의 최댓값 (Ah) — 휴지 · 수집 문제로 생기는 급변
+    - qdlin_offset   : 10번째 사이클 Qdlin 끝값 − 요약 방전 용량 (Ah) — 방전 곡선 보간 방식 차이
+    """
+    cyc = cell['summary']['cycle'][:MAX_CYCLE]
+    qd = valid_qd(cell)[1:100]
+    qd = qd[~np.isnan(qd)]
+    q = cell['qdlin']
+    return {
+        'cycle_gaps_100': int((np.diff(cyc) != 1).sum()),
+        'qdlin_ok': bool(np.isfinite(q[9]).all() and np.isfinite(q[99]).all()),
+        'vdlin_same': bool(np.allclose(cell['vdlin'], ref_vdlin)),
+        'qd_jump_max': float(np.abs(np.diff(qd)).max()) if len(qd) > 1 else np.nan,
+        'qdlin_offset': float(q[9][-1] - cell['summary']['QDischarge'][9]),
+    }
+
+
+def early_data_ok(row):
+    """초기 데이터 품질 통과 여부 (모델 선택에는 쓰지 않고, 평가 결과를 나눠 보는 데만 쓴다)."""
+    return row['cycle_gaps_100'] == 0 and row['qdlin_ok'] and row['vdlin_same'] and row['qd_jump_max'] <= QD_JUMP_MAX
 
 
 if __name__ == '__main__':

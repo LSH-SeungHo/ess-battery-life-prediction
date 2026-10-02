@@ -17,7 +17,7 @@ import pandas as pd
 from scipy.stats import kurtosis, skew
 
 from config import PROCESSED_DIR
-from preprocess import eol_cycle, label_status, load_cells, valid_ir, valid_qd
+from preprocess import alignment_check, early_data_ok, eol_cycle, label_status, load_cells, valid_ir, valid_qd
 
 
 def delta_q(cell, hi=100, lo=10):
@@ -106,6 +106,7 @@ def energy_value_curve(cells, life_by_id, grid=np.linspace(0, 1, 101)):
 
 def build_table(cells):
     rows = []
+    ref_vdlin = next(c['vdlin'] for c in cells if c['batch'] == 'b1')
     for cell in cells:
         row = {
             'batch': cell['batch'], 'cell_id': cell['cell_id'], 'policy': cell['policy'],
@@ -114,6 +115,8 @@ def build_table(cells):
         }
         if cell['n_cycles'] >= 101 and not np.isnan(cell['qdlin'][99]).all():
             row.update(cell_features(cell))
+            row.update(alignment_check(cell, ref_vdlin))
+            row['early_data_ok'] = early_data_ok(row)
         rows.append(row)
     df = pd.DataFrame(rows)
     df['cycle_life'] = np.where(df['status'] == 'used', df['cycle_life_raw'], np.nan)
@@ -125,4 +128,7 @@ if __name__ == '__main__':
     df = build_table(load_cells())
     df.to_csv(PROCESSED_DIR / 'features.csv', index=False)
     print(df.groupby(['batch', 'status']).size().unstack(fill_value=0))
+    u = df[df.status == 'used']
+    print(u.groupby('batch')[['cycle_gaps_100', 'qdlin_ok', 'vdlin_same', 'early_data_ok']].agg(['sum', 'count']))
+    print(u.groupby('batch')[['qd_jump_max', 'qdlin_offset']].median().round(4))
     print('saved', PROCESSED_DIR / 'features.csv', df.shape)

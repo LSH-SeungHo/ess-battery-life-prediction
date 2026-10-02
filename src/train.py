@@ -1,24 +1,24 @@
 """
 3단계 학습 · 선택 · 평가 파이프라인.
 
-데이터 분할 (테스트 데이터는 마지막에 한 번만 본다)
-    Batch 1 36셀  → 학습 28셀 + 검증(Hold-out) 8셀
-                    같은 충전 방식(policy)의 셀은 반드시 같은 쪽에 둔다 (짝 셀이 양쪽에 갈리면 누수).
-                    방식 20개를 평균 수명 순으로 세우고 4개마다 1개(index % 4 == 1)를 검증으로 → 수명 범위 고르게
+데이터 분할 (B1 = 학습 배치, B2 = 테스트 배치)
+    B1 36셀 → 학습 28셀 + 검증(Hold-out) 8셀
+              같은 충전 방식(policy)의 셀은 반드시 같은 쪽에 둔다 (짝 셀이 양쪽에 갈리면 누수).
+              방식 20개를 평균 수명 순으로 세우고 4개마다 1개(index % 4 == 1)를 검증으로 → 수명 범위 고르게
     학습 28셀 안 교차검증 → GroupKFold(5, groups=policy)
-    Batch 2 39셀  → 테스트 (최종 모델로 1회 평가)
-    Batch 3 44셀  → 추가 검증 (선택 과제)
+    선택이 끝나면 B1 36셀 전부로 다시 학습 = 최종 모델
+    B2 39셀 전부 → 테스트 · B3 44셀 전부 → 추가 검증 (선택이 끝난 뒤 보고 대상 모델에만 1회 적용)
 
 두 층으로 나눠 평가한다
     ① 모델 = 수명을 얼마나 정확히 맞히나 → MAPE (원논문 9.1%와 비교, 과제 성능표 포맷)
     ② 여유 배율 = 예측에 곱해 일찍 경고하는 정도 → 회사 손실 기준
        셀 하나의 손실 (단위: 배터리 교체비)
-         일찍 교체: v(남긴 수명 비율)   v = B1 용량 곡선으로 측정한 '남긴 방전량 비율'
-         늦게 교체: R                  R = 고장 1건의 추가 손실 (회사 값이라 모름)
-       R을 0 ~ 3(0.1 간격), 5, 10, ∞로 바꿔 가며 R마다
-         - 학습 교차검증 예측에서 손실이 최소인 여유 배율을 구하고
-         - 그 손실이 가장 작은 모델을 고른다 (학습 데이터만 사용)
-       → R마다 고른 모델 · 여유 배율 · 검증/B2/B3 결과를 모두 표로 남긴다 (results/cost_sensitivity.csv)
+         일찍 교체: v(남긴 수명 비율)   v = 용량 곡선으로 측정한 '남긴 방전량 비율'
+         늦게 교체: R                  R = 수명 종료를 넘겨 쓴 1건의 추가 손실 (회사 값이라 모름)
+       R = 0.1 ~ 3.0(0.1 간격), 5, 10, ∞ 마다
+         - 학습 28셀 교차검증 예측 + 학습 28셀로 만든 v로 손실이 최소인 여유 배율과 모델을 고른다
+         - 최종 여유 배율은 B1 36셀 교차검증 예측 + B1 36셀로 만든 v로 다시 구한다
+       검증 8셀에는 학습용 배율, B2 · B3에는 최종 배율을 곱한다
 
 전처리(결측 대체 · 표준화)는 Pipeline 안에 있어 각 fold의 학습 부분에만 fit 된다.
 
@@ -62,6 +62,10 @@ def split_holdout(b1):
     return b1[~is_valid].reset_index(drop=True), b1[is_valid].reset_index(drop=True)
 
 
+def value_curve(df, cells):
+    return energy_value_curve(cells, dict(zip(df.cell_id, df.cycle_life)))
+
+
 # ---------- 지표 · 손실 ----------
 def mape(y, p):
     return float(np.mean(np.abs((np.asarray(p) - y) / y)) * 100)
@@ -74,14 +78,11 @@ def cell_loss(y, p, R, curve):
     return np.where(e > 0, R, early)
 
 
-def summarize(y, p, R, curve):
+def summarize(y, p):
+    """늦은 교체 건수와 '평균 일찍(%)' = 셀마다 max(실제 − 예측, 0) / 실제 의 평균 (늦은 셀은 0으로 포함)."""
     y = np.asarray(y, float)
     e = (np.asarray(p, float) - y) / y
-    loss = cell_loss(y, p, R, curve) if np.isfinite(R) else cell_loss(y, p, 0, curve)
-    return {'n': len(y), '늦은 교체': int((e > 0).sum()), 'MAPE': mape(y, p),
-            '평균 일찍(%)': float(np.mean(np.clip(-e, 0, None)) * 100),
-            '최대 늦음(%)': float(max(e.max(), 0) * 100),
-            '셀당 손실': float(loss.mean()) if np.isfinite(R) or (e <= 0).all() else np.inf}
+    return {'n': len(y), '늦은 교체': int((e > 0).sum()), '평균 일찍(%)': float(np.mean(np.clip(-e, 0, None)) * 100)}
 
 
 def best_margin(y, pred, R, curve):
@@ -120,65 +121,85 @@ def family(name):
     return name.split(' (')[0]
 
 
-def oof_predict(est, X, y, groups):
-    """GroupKFold(같은 충전 방식은 같은 fold) out-of-fold 예측 → 수명(사이클)."""
-    p = np.zeros(len(y))
+def oof_predict(est, X, y, groups, life=None):
+    """GroupKFold(같은 충전 방식은 같은 fold) out-of-fold 예측 → 수명(사이클). life를 주면 fold별 MAPE도 반환."""
+    p, fold_mape = np.zeros(len(y)), []
     for tr, te in GroupKFold(N_FOLDS).split(X, y, groups):
-        p[te] = clone(est).fit(X.iloc[tr], y.iloc[tr]).predict(X.iloc[te])
-    return 10 ** p
+        p[te] = 10 ** clone(est).fit(X.iloc[tr], y.iloc[tr]).predict(X.iloc[te])
+        if life is not None:
+            fold_mape.append(mape(life.iloc[te].values, p[te]))
+    return (p, fold_mape) if life is not None else p
 
 
-# ---------- 단계별 예측 ----------
-def stage_predictions(cand, train, valid, b1, b2, b3):
-    """후보마다: 학습 28셀 교차검증 · 검증 8셀 · (B1 36셀 재학습 후) B1 교차검증 · B2 · B3 예측."""
+# ---------- 1) 선택 단계: B1만 사용 ----------
+def b1_predictions(cand, train, valid, b1):
+    """후보마다 학습 28셀 교차검증 · 검증 8셀 · B1 36셀 교차검증 예측 (B2 · B3는 아직 쓰지 않는다)."""
     out = {}
     for name, feats, est in cand:
-        model_tr = clone(est).fit(train[feats], train[TARGET])
-        model_b1 = clone(est).fit(b1[feats], b1[TARGET])
-        out[name] = {
-            'train_cv': oof_predict(est, train[feats], train[TARGET], train.policy),
-            'valid': 10 ** model_tr.predict(valid[feats]),
-            'b1_cv': oof_predict(est, b1[feats], b1[TARGET], b1.policy),
-            'b2': 10 ** model_b1.predict(b2[feats]),
-            'b3': 10 ** model_b1.predict(b3[feats]),
-        }
+        p_cv, folds = oof_predict(est, train[feats], train[TARGET], train.policy, train.cycle_life)
+        out[name] = {'train_cv': p_cv, 'train_folds': folds,
+                     'valid': 10 ** clone(est).fit(train[feats], train[TARGET]).predict(valid[feats]),
+                     'b1_cv': oof_predict(est, b1[feats], b1[TARGET], b1.policy)}
     return out
 
 
-def performance_table(name, P, train, valid, b2, b3):
-    """과제 리포팅 포맷 (모델 정확도, 여유 배율 적용 전): Train(B1 CV) / Valid(B1 Hold-out) / Test(B2) / Gap."""
-    p = P[name]
-    t = pd.Series({
-        'Train (B1 CV)': mape(train.cycle_life, p['train_cv']),
-        'Valid (B1 Hold-out)': mape(valid.cycle_life, p['valid']),
-        'Test (B2)': mape(b2.cycle_life, p['b2']),
-        'Test (B3, 추가)': mape(b3.cycle_life, p['b3']),
-    })
-    # MAPE는 낮을수록 좋으므로 Gap = 뒤 − 앞 : (+)면 뒤 단계에서 성능 저하
-    t['Gap (Train−Valid)'] = t['Valid (B1 Hold-out)'] - t['Train (B1 CV)']
-    t['Gap (Valid−Test)'] = t['Test (B2)'] - t['Valid (B1 Hold-out)']
-    t['Gap (Target−Test)'] = t['Test (B2)'] - TARGET_MAPE
-    t['Gap (B2−B3, 추가)'] = t['Test (B3, 추가)'] - t['Test (B2)']
-    return t.rename(name)
-
-
-def cost_sweep(P, train, valid, b1, b2, b3, curve):
-    """R마다 학습 데이터로 모델 · 여유 배율 선택 → 검증 · B2 · B3에 그대로 적용."""
+def select_by_cost(P, train, b1, curve_tr, curve_b1):
+    """R마다 학습 28셀 기준으로 모델 · 여유 배율 선택, 최종 배율은 B1 36셀로."""
     rows = []
     for R in LATE_COST_GRID:
-        scores = {n: best_margin(train.cycle_life, p['train_cv'], R, curve) for n, p in P.items()}
+        scores = {n: best_margin(train.cycle_life, p['train_cv'], R, curve_tr) for n, p in P.items()}
         name = min(scores, key=lambda n: scores[n][1])
         m_tr, loss_tr = scores[name]
-        m_b1, _ = best_margin(b1.cycle_life, P[name]['b1_cv'], R, curve)   # 최종 모델(B1 36셀)용 여유 배율
-        row = {'R': R, '선택 모델': name, '여유 배율 (학습 28셀)': m_tr, '여유 배율 (B1 36셀)': m_b1}
-        for split, y, p, m in [('학습 CV', train.cycle_life, P[name]['train_cv'], m_tr), ('검증', valid.cycle_life, P[name]['valid'], m_tr),
-                               ('B2', b2.cycle_life, P[name]['b2'], m_b1), ('B3', b3.cycle_life, P[name]['b3'], m_b1)]:
-            s = summarize(y, p * m, R, curve)
+        m_b1, _ = best_margin(b1.cycle_life, P[name]['b1_cv'], R, curve_b1)
+        rows.append({'R': R, '선택 모델': name, '여유 배율 (학습 28셀)': m_tr, '여유 배율 (최종, B1 36셀)': m_b1})
+    return pd.DataFrame(rows)
+
+
+# ---------- 2) 평가 단계: 보고 대상 모델만 B2 · B3에 적용 ----------
+def final_predictions(names, cand, b1, b2, b3):
+    spec = {n: (f, e) for n, f, e in cand}
+    out = {}
+    for n in names:
+        feats, est = spec[n]
+        model = clone(est).fit(b1[feats], b1[TARGET])
+        out[n] = {'b2': 10 ** model.predict(b2[feats]), 'b3': 10 ** model.predict(b3[feats])}
+    return out
+
+
+def evaluate_sweep(sel, P, F, train, valid, b2, b3):
+    rows = []
+    for _, r in sel.iterrows():
+        n, row = r['선택 모델'], r.to_dict()
+        for split, y, p, m in [('학습 CV', train.cycle_life, P[n]['train_cv'], r['여유 배율 (학습 28셀)']),
+                               ('검증', valid.cycle_life, P[n]['valid'], r['여유 배율 (학습 28셀)']),
+                               ('B2', b2.cycle_life, F[n]['b2'], r['여유 배율 (최종, B1 36셀)']),
+                               ('B3', b3.cycle_life, F[n]['b3'], r['여유 배율 (최종, B1 36셀)'])]:
+            s = summarize(y, p * m)
             row[f'{split} 늦은 교체'] = f"{s['늦은 교체']}/{s['n']}"
             row[f'{split} 평균 일찍(%)'] = s['평균 일찍(%)']
-            row[f'{split} 셀당 손실'] = s['셀당 손실']
         rows.append(row)
     return pd.DataFrame(rows)
+
+
+def performance_table(name, P, F, train, valid, b2, b3):
+    """과제 리포팅 포맷 (모델 정확도, 여유 배율 적용 전 MAPE %).
+    Gap은 행 이름 그대로 '앞 − 뒤'로 계산한다. MAPE는 낮을수록 좋으므로 Gap이 (−)이면 뒤 단계에서 오차가 커졌다는 뜻."""
+    p, f = P[name], F[name]
+    ok2 = b2.early_data_ok.astype(bool).values
+    t = pd.Series({
+        'Train (B1 CV, fold 평균)': np.mean(p['train_folds']),
+        'Train (B1 CV, fold 표준편차)': np.std(p['train_folds']),
+        'Valid (B1 Hold-out)': mape(valid.cycle_life, p['valid']),
+        'Test (B2)': mape(b2.cycle_life, f['b2']),
+        'Test (B3, 추가)': mape(b3.cycle_life, f['b3']),
+    })
+    t['Gap (Train−Valid)'] = t['Train (B1 CV, fold 평균)'] - t['Valid (B1 Hold-out)']
+    t['Gap (Valid−Test)'] = t['Valid (B1 Hold-out)'] - t['Test (B2)']
+    t['Gap (Target−Test)'] = TARGET_MAPE - t['Test (B2)']
+    t['Gap (B2−B3, 추가)'] = t['Test (B2)'] - t['Test (B3, 추가)']
+    t['Gap (Target−Test, B3 기준)'] = TARGET_MAPE - t['Test (B3, 추가)']
+    t[f'참고: Test (B2, 초기 데이터 품질 통과 {ok2.sum()}셀)'] = mape(b2.cycle_life[ok2], f['b2'][ok2])
+    return t.rename(name)
 
 
 def main():
@@ -186,41 +207,47 @@ def main():
     train, valid = split_holdout(b1)
     print(f'학습 {len(train)}셀({train.policy.nunique()}방식) / 검증 {len(valid)}셀({valid.policy.nunique()}방식) / 테스트 B2 {len(b2)} / 추가 B3 {len(b3)}')
 
-    # 일찍 교체 손실 곡선 — 학습 배치(B1) 용량 곡선으로 측정
-    curve = energy_value_curve(load_cells(['b1']), dict(zip(b1.cell_id, b1.cycle_life)))
-    pd.DataFrame({'남긴 수명 비율': curve[0], '남긴 방전량 비율': curve[1]}).round(4).to_csv(RESULTS_DIR / 'energy_value_curve.csv', index=False)
-    print('남긴 수명 10/20/30/50% → 남긴 방전량', np.round(np.interp([.1, .2, .3, .5], *curve), 3))
+    # 일찍 교체 손실 곡선 — 선택용은 학습 28셀, 최종 배율용은 B1 36셀
+    cells_b1 = load_cells(['b1'])
+    curve_tr, curve_b1 = value_curve(train, cells_b1), value_curve(b1, cells_b1)
+    pd.DataFrame({'남긴 수명 비율': curve_tr[0], '남긴 방전량 비율 (학습 28셀)': curve_tr[1],
+                  '남긴 방전량 비율 (B1 36셀)': curve_b1[1]}).round(4).to_csv(RESULTS_DIR / 'energy_value_curve.csv', index=False)
+    print('남긴 수명 10/20/30/50% → 남긴 방전량 (학습 28셀)', np.round(np.interp([.1, .2, .3, .5], *curve_tr), 3))
 
+    # 1) 선택 — B1만
     cand = candidates()
-    P = stage_predictions(cand, train, valid, b1, b2, b3)
-
-    # ① 모델 정확도 — 후보 비교는 학습 · 검증만
+    P = b1_predictions(cand, train, valid, b1)
     acc = pd.DataFrame([{'후보': n, '계열': family(n), '피처': ' + '.join(f),
-                         'Train CV MAPE': mape(train.cycle_life, P[n]['train_cv']), 'Valid MAPE': mape(valid.cycle_life, P[n]['valid'])}
-                        for n, f, _ in cand]).sort_values('Train CV MAPE').reset_index(drop=True)
+                         'Train CV MAPE (fold 평균)': np.mean(P[n]['train_folds']), 'Train CV MAPE (fold 표준편차)': np.std(P[n]['train_folds']),
+                         'Valid MAPE': mape(valid.cycle_life, P[n]['valid'])}
+                        for n, f, _ in cand]).sort_values('Train CV MAPE (fold 평균)').reset_index(drop=True)
     acc.round(3).to_csv(RESULTS_DIR / 'candidates_cv.csv', index=False)
+    sel = select_by_cost(P, train, b1, curve_tr, curve_b1)
 
-    # ② 손실 기준 선택 — R마다
-    sweep = cost_sweep(P, train, valid, b1, b2, b3, curve)
+    # 2) 평가 — 보고 대상: 기준선 + 계열별 최선(학습 CV) + R별 선택 모델
+    report = [BASELINE] + [n for n in acc.groupby('계열', sort=False).head(1).후보 if n != BASELINE]
+    report += [n for n in sel['선택 모델'].unique() if n not in report]
+    F = final_predictions(report, cand, b1, b2, b3)
+
+    sweep = evaluate_sweep(sel, P, F, train, valid, b2, b3)
     sweep.round(4).to_csv(RESULTS_DIR / 'cost_sensitivity.csv', index=False)
-    show = ['R', '선택 모델', '여유 배율 (B1 36셀)', '학습 CV 늦은 교체', '검증 늦은 교체', 'B2 늦은 교체', 'B2 평균 일찍(%)', 'B3 늦은 교체']
-    print('\n[R별 선택 — R = 고장 1건 추가 손실 ÷ 교체비]')
+    show = ['R', '선택 모델', '여유 배율 (학습 28셀)', '여유 배율 (최종, B1 36셀)', '학습 CV 늦은 교체', '검증 늦은 교체', 'B2 늦은 교체', 'B3 늦은 교체', 'B3 평균 일찍(%)']
+    print('\n[R별 선택]')
     print(sweep[show].round(3).to_string(index=False))
 
-    # 성능표 — 기준선 + 계열별 최선(학습 CV) + R별로 선택된 모델
-    report = [BASELINE] + [n for n in acc.groupby('계열', sort=False).head(1).후보 if n != BASELINE]
-    report += [n for n in sweep['선택 모델'].unique() if n not in report]
-    perf = pd.concat([performance_table(n, P, train, valid, b2, b3) for n in report], axis=1)
+    perf = pd.concat([performance_table(n, P, F, train, valid, b2, b3) for n in report], axis=1)
     perf.index.name = '구분 (MAPE %, 여유 배율 적용 전)'
     perf.round(2).to_csv(RESULTS_DIR / 'model_performance.csv')
     print('\n[모델 정확도 — 과제 포맷]')
     print(perf.round(2).to_string())
 
-    preds = pd.concat([pd.DataFrame({'model': n, 'split': s, 'cell_id': d.cell_id, 'policy': d.policy,
-                                     'cycle_life': d.cycle_life, 'pred': P[n][k]})
-                       for n in report for s, k, d in [('train_cv', 'train_cv', train), ('valid', 'valid', valid),
-                                                       ('test_b2', 'b2', b2), ('test_b3', 'b3', b3)]])
-    preds.round(2).to_csv(RESULTS_DIR / 'predictions.csv', index=False)
+    preds = []
+    for n in report:
+        for s, d, p in [('train_cv', train, P[n]['train_cv']), ('valid', valid, P[n]['valid']),
+                        ('test_b2', b2, F[n]['b2']), ('test_b3', b3, F[n]['b3'])]:
+            preds.append(pd.DataFrame({'model': n, 'split': s, 'cell_id': d.cell_id, 'policy': d.policy,
+                                       'cycle_life': d.cycle_life, 'pred': p}))
+    pd.concat(preds).round(2).to_csv(RESULTS_DIR / 'predictions.csv', index=False)
 
 
 if __name__ == '__main__':
