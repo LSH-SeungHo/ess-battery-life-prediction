@@ -115,6 +115,8 @@ def alignment_check(cell, ref_vdlin):
     - vdlin_same     : 전압 눈금이 학습 배치와 같은가
     - qd_jump_max    : 연속 두 사이클 방전 용량 차이의 최댓값 (Ah) — 휴지 · 수집 문제로 생기는 급변
     - qdlin_offset   : 10번째 사이클 Qdlin 끝값 − 요약 방전 용량 (Ah) — 방전 곡선 보간 방식 차이
+    - qdlin_start    : 10 · 100번째 사이클 Qdlin 시작값(3.5V)의 절댓값 — 용량 원점이 맞는가
+    원시 방전 곡선은 저장하지 않으므로 보간 과정 자체는 점검하지 못한다.
     """
     cyc = cell['summary']['cycle'][:MAX_CYCLE]
     qd = valid_qd(cell)[1:100]
@@ -126,6 +128,7 @@ def alignment_check(cell, ref_vdlin):
         'vdlin_same': bool(np.allclose(cell['vdlin'], ref_vdlin)),
         'qd_jump_max': float(np.abs(np.diff(qd)).max()) if len(qd) > 1 else np.nan,
         'qdlin_offset': float(q[9][-1] - cell['summary']['QDischarge'][9]),
+        'qdlin_start': float(np.nanmax(np.abs([q[9][0], q[99][0]]))),   # 3.5V 지점 방전 용량 (원점이 0에 맞는가)
     }
 
 

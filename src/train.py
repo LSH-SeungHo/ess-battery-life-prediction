@@ -166,19 +166,59 @@ def final_predictions(names, cand, b1, b2, b3):
     return out
 
 
-def evaluate_sweep(sel, P, F, train, valid, b2, b3):
+def evaluate_sweep(sel, P, F, train, valid, b1, b2, b3, curve_tr, curve_b1):
+    """R마다 선택 결과를 검증 · B2 · B3에 적용. 셀당 손실(교체비 단위)은 R이 유한할 때만 계산하고,
+    같은 R에서 기준선(ΔQ 선형회귀 + 그 모델의 최적 배율)의 손실도 함께 남긴다."""
     rows = []
     for _, r in sel.iterrows():
-        n, row = r['선택 모델'], r.to_dict()
-        for split, y, p, m in [('학습 CV', train.cycle_life, P[n]['train_cv'], r['여유 배율 (학습 28셀)']),
-                               ('검증', valid.cycle_life, P[n]['valid'], r['여유 배율 (학습 28셀)']),
-                               ('B2', b2.cycle_life, F[n]['b2'], r['여유 배율 (최종, B1 36셀)']),
-                               ('B3', b3.cycle_life, F[n]['b3'], r['여유 배율 (최종, B1 36셀)'])]:
+        n, row, R = r['선택 모델'], r.to_dict(), r['R']
+        m_base_tr, _ = best_margin(train.cycle_life, P[BASELINE]['train_cv'], R, curve_tr)
+        m_base_b1, _ = best_margin(b1.cycle_life, P[BASELINE]['b1_cv'], R, curve_b1)
+        for split, y, p, m, pb, mb, cv in [
+                ('학습 CV', train.cycle_life, P[n]['train_cv'], r['여유 배율 (학습 28셀)'], P[BASELINE]['train_cv'], m_base_tr, curve_tr),
+                ('검증', valid.cycle_life, P[n]['valid'], r['여유 배율 (학습 28셀)'], P[BASELINE]['valid'], m_base_tr, curve_tr),
+                ('B2', b2.cycle_life, F[n]['b2'], r['여유 배율 (최종, B1 36셀)'], F[BASELINE]['b2'], m_base_b1, curve_b1),
+                ('B3', b3.cycle_life, F[n]['b3'], r['여유 배율 (최종, B1 36셀)'], F[BASELINE]['b3'], m_base_b1, curve_b1)]:
             s = summarize(y, p * m)
             row[f'{split} 늦은 교체'] = f"{s['늦은 교체']}/{s['n']}"
             row[f'{split} 평균 일찍(%)'] = s['평균 일찍(%)']
+            if np.isfinite(R):
+                row[f'{split} 셀당 손실'] = float(cell_loss(y.values, p * m, R, cv).mean())
+                row[f'{split} 셀당 손실 (기준선)'] = float(cell_loss(y.values, pb * mb, R, cv).mean())
         rows.append(row)
     return pd.DataFrame(rows)
+
+
+def nested_cv(cand, b1, cells_b1):
+    """선택 과정 전체(피처 조합 · 모델 · 여유 배율)를 B1 안에서 한 번 더 감싸 평가한다 (중첩 교차검증).
+    바깥 GroupKFold(5, 충전 방식)의 학습 부분에서 안쪽 GroupKFold로 선택을 처음부터 다시 하고,
+    바깥 평가 부분(처음 보는 충전 방식의 셀)에 적용한다. → 선택 과정의 낙관 편향까지 포함한 B1 안 성능"""
+    cell_rows, acc_rows = [], []
+    for k, (tr, te) in enumerate(GroupKFold(N_FOLDS).split(b1, b1[TARGET], b1.policy)):
+        inner, test = b1.iloc[tr].reset_index(drop=True), b1.iloc[te].reset_index(drop=True)
+        curve = value_curve(inner, cells_b1)
+        oof, fold_mean, outp = {}, {}, {}
+        for n, f, e in cand:
+            oof[n], folds = oof_predict(e, inner[f], inner[TARGET], inner.policy, inner.cycle_life)
+            fold_mean[n] = np.mean(folds)
+            outp[n] = 10 ** clone(e).fit(inner[f], inner[TARGET]).predict(test[f])
+        best = min(fold_mean, key=fold_mean.get)                       # 정확도(MAPE) 기준 선택
+        acc_rows.append({'fold': k, '선택 모델 (MAPE 기준)': best, 'MAPE': mape(test.cycle_life, outp[best]), 'n': len(test)})
+        for R in LATE_COST_GRID:                                       # 손실 기준 선택
+            scores = {n: best_margin(inner.cycle_life, oof[n], R, curve) for n in oof}
+            n = min(scores, key=lambda x: scores[x][1])
+            m = scores[n][0]
+            y, p = test.cycle_life.values, outp[n] * m
+            e = (p - y) / y
+            cell_rows.append(pd.DataFrame({'fold': k, 'R': R, '선택 모델': n, '여유 배율': m, 'cell_id': test.cell_id,
+                                           '늦은 교체': e > 0, '일찍(%)': np.clip(-e, 0, None) * 100,
+                                           '손실': cell_loss(y, p, R, curve) if np.isfinite(R) else np.nan}))
+    cells = pd.concat(cell_rows)
+    acc = pd.DataFrame(acc_rows)
+    summary = cells.groupby('R').agg(늦은_교체=('늦은 교체', 'sum'), 셀=('cell_id', 'size'), 평균_일찍=('일찍(%)', 'mean'),
+                                     셀당_손실=('손실', 'mean'), 배율_최소=('여유 배율', 'min'), 배율_최대=('여유 배율', 'max'),
+                                     선택_모델=('선택 모델', lambda x: ' / '.join(sorted(set(x))))).reset_index()
+    return summary, acc
 
 
 def performance_table(name, P, F, train, valid, b2, b3):
@@ -229,7 +269,7 @@ def main():
     report += [n for n in sel['선택 모델'].unique() if n not in report]
     F = final_predictions(report, cand, b1, b2, b3)
 
-    sweep = evaluate_sweep(sel, P, F, train, valid, b2, b3)
+    sweep = evaluate_sweep(sel, P, F, train, valid, b1, b2, b3, curve_tr, curve_b1)
     sweep.round(4).to_csv(RESULTS_DIR / 'cost_sensitivity.csv', index=False)
     show = ['R', '선택 모델', '여유 배율 (학습 28셀)', '여유 배율 (최종, B1 36셀)', '학습 CV 늦은 교체', '검증 늦은 교체', 'B2 늦은 교체', 'B3 늦은 교체', 'B3 평균 일찍(%)']
     print('\n[R별 선택]')
@@ -240,6 +280,14 @@ def main():
     perf.round(2).to_csv(RESULTS_DIR / 'model_performance.csv')
     print('\n[모델 정확도 — 과제 포맷]')
     print(perf.round(2).to_string())
+
+    # 3) 선택 과정까지 포함한 B1 중첩 교차검증
+    nest, nest_acc = nested_cv(cand, b1, cells_b1)
+    nest.round(4).to_csv(RESULTS_DIR / 'nested_cv.csv', index=False)
+    print('\n[B1 중첩 교차검증 — 정확도 기준 선택 모델의 바깥 fold MAPE]')
+    print(nest_acc.round(2).to_string(index=False), '\n가중 평균 MAPE %.2f%%' % np.average(nest_acc.MAPE, weights=nest_acc.n))
+    print('\n[B1 중첩 교차검증 — R별 손실 기준 선택]')
+    print(nest[['R', '늦은_교체', '셀', '평균_일찍', '셀당_손실', '배율_최소', '배율_최대']].round(3).to_string(index=False))
 
     preds = []
     for n in report:

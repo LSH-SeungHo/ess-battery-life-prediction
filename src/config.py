@@ -23,7 +23,7 @@ QD_JUMP_MAX = 0.05               # 초기 100사이클 안에서 연속 두 사�
 CORE = ['dq_var_log']
 CANDIDATES = ['dq_skew', 'qd_slope_2_100', 'ir_min', 'tavg_mean']
 EXCLUDED = {                     # 1일차 EDA에서 제외한 피처와 이유
-    'chargetime_2_6': 'ΔQ 분산과 중복 (ΔQ 반영 후 남는 상관 0.09, 더해도 교차검증 개선 없음)',
+    'chargetime_2_6': 'ΔQ 분산과 중복 (학습 28셀: ΔQ 반영 후 남는 상관 0.05, 더하면 교차검증 7.98% → 8.37%)',
     'qd_2': '초기 용량 값은 수명별 차이 없음',
     'dq_min_log': 'ΔQ 분산과 중복 (상관 1.00)',
     'dq_mean_log': 'ΔQ 분산과 중복',
